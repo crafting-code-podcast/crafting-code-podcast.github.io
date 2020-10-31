@@ -1,14 +1,34 @@
 <html>
     <head>
         <title>Crafting Code Podcast</title>
-        <style>
-            body {
-                font-family: 'Courier New', Courier, monospace;
-            }
-        </style>
+        <link rel="stylesheet" href="./style.css" />
     </head>
     <body>
-        <h1>Crafting Code Podcast</h1>
-        <p>~/podcast<br/>$ launch<br/>Coming soon...</p>
+        <div class="content">
+            <h1><a href="/index.html">Crafting Code Podcast</a></h1>
+            <pre class="terminal">
+<nav><span class="dir">~/podcast</span>
+$ ls
+about.txt  copyright.txt  <a href="/episodes/index.html">episodes</a>  <a href="http://crafting-code-podcast.s3-website-us-west-2.amazonaws.com/feed.xml">rss-feed</a>
+</nav>
+<span class="dir">~/podcast</span>
+$ cat about.txt
+The concept and principles of crafting software have made a dramatic difference for the hosts of this
+podcast. Applying these ideas has helped us to write better code, build maintainable systems, and be more
+professional. We've also seen the improvement they have on development teams.
+
+In this podcast, your hosts discuss the importance of doing the right thing, at the right time, with the
+right tools. To us, this is one of the keys to <a href="http://manifesto.softwarecraftsmanship.org/">software craftsmanship</a>. We talk about experiences we've had
+and share advice on improving software development outcomes.
+
+We strongly advocate being part of a community of professionals. You can find us at our local group, the
+<a href="http://utahsc.org/">Utah Software Craftsmanship</a> meetup. There are also other groups worldwide;
+discover them (or add your own) at <a href="https://softwarecrafters.org/">softwarecrafters.org</a>
+
+<span class="dir">~/podcast</span>
+$ cat copyright.txt
+Copyright &copy; 2020 - Crafting Code Podcast
+</pre>
+        </div>
     </body>
 </html>
