@@ -3,8 +3,24 @@ body {
     font-size: 18px;
 }
 
+p {
+    margin: 0 0 18px 0;
+}
+
+nav ul {
+    margin: 0 0 18px 0;
+    padding: 0;
+}
+
+nav li {
+    list-style: none;
+    display: inline;
+    padding-right: 10px;
+}
+
 .content {
-    width: 1200px;
+    min-width: 400px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -17,6 +33,7 @@ body {
 
 .dir {
     color: #ffff55;
+    display: block;
 }
 
 a {
@@ -34,4 +51,12 @@ h1 a {
 
 a.script {
     color: #55FF55;
+}
+
+.listing {
+    margin-bottom: 18px;
+}
+
+.listing a {
+    display: block;
 }
