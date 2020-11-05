@@ -60,3 +60,16 @@ a.script {
 .listing a {
     display: block;
 }
+
+ul.txt {
+    margin: 0 0 18px 0;
+    padding: 0;
+}
+
+ul.txt li {
+    list-style: none;
+}
+
+ul.txt li::before {
+    content: '* ';
+}
