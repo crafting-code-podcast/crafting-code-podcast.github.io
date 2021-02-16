@@ -1,0 +1,125 @@
+<html>
+    <head>
+        <title>Crafting Code Podcast</title>
+        <link rel="stylesheet" href="../style.css" />
+        <link rel="icon" href="/logo-90.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/logo-180.png">
+        <link rel="apple-touch-icon" sizes="90x90" href="/logo-90.png">
+        <meta property="og:title" content="Crafting Code Podcast - Episode 6 - Deleting Code" />
+        <meta property="og:description" content="A professional doesn't just write code, they also know when to delete it. In this episode, we discuss the problems that code can cause and share some ideas on how to go about making your codebase smaller." />
+        <meta property="og:image" content="https://crafting-code-podcast.github.io/logo-90.png" />
+    </head>
+    <body>
+        <div class="content">
+            <h1><a href="/index.html">Crafting Code Podcast</a></h1>
+            <div class="terminal">
+                <nav>
+                    <span class="dir">~/podcast</span>
+                    $ ls
+                    <ul>
+                        <li>about.txt</li>
+                        <li>copyright.txt</li>
+                        <li><a href="/episodes/index.html">episodes</a></li>
+                        <li><a href="https://d1ohtljhghz8nz.cloudfront.net/feed.xml">rss&#8209;feed</a></li>
+                    </ul>
+                </nav>
+
+                <span class="dir">~/podcast</span>
+                <p>$ cd episodes/006-deleting-code</p>
+
+                <span class="dir">~/podcast/episodes/006-deleting-code</span>
+                $ ls -1a
+                <div class="listing">
+                    <a href="">.</a>
+                    <a href="./index.html">..</a>
+                    episode-summary.txt
+                    <a href="https://d1ohtljhghz8nz.cloudfront.net/episodes/006-deleting-code.mp3" class="script">get-mp3.sh</a>
+                </div>
+
+                <span class="dir">~/podcast/episodes</span>
+                $ cat episode-summary.txt
+                <p>
+                    A professional doesn't just write code, they also know when to delete it.
+                    In this episode, we discuss the problems that code can cause and share some ideas on how to go about making your codebase smaller.
+                </p>
+
+                <p>Timestamps</p>
+                <p>
+                    [00:00:00]
+                    Host introductions.
+                    Why would a professional want to delete code?
+                    Batch size: rewrite vs. refactor. Sometimes it is faster to just rewrite it.
+                </p>
+                <p>
+                    [00:03:49]
+                    Is code an asset or liability?
+                    Code becomes a constraint as soon as it is written.
+                    The world changes around the code, forcing you to keep it maintained.
+                </p>
+                <p>
+                    [00:13:12]
+                    U-curve optimization function for how much code you should have.
+                    Code has inertia.
+                    Can you turn your ship?
+                </p>
+                <p>
+                    [00:17:33]
+                    Delete dead code and remove debris.
+                    Don't be clever.
+                    Be intentional about whether you're crafting business value or making art.
+                </p>
+                <p>
+                    [00:25:03]
+                    Liabilities are considered bad, but they enable something.
+                    Strategically remove duplication.
+                </p>
+                <p>
+                    [00:30:05]
+                    Code doesn't have to feel so precious if you have confidence in manipulating it.
+                    Burning down the greenfield to make it more comfortable.
+                </p>
+                <p>
+                    [00:32:44]
+                    Deleting or replacing things is made much easier by keeping the scope small.
+                    Micro-commits and the tiger team problem.
+                </p>
+                <p>
+                    [00:38:13]
+                    Be careful about deleting code.
+                    Don't use technology to solve people problems.
+                    Encoding business processes can limit your ability to change.
+                </p>
+                <p>
+                    [00:43:58]
+                    What types of code are most difficult to delete?
+                    Old/unfamiliar code. Big code. Coupling. Little-used code. Untested code.
+                </p>
+                <p>
+                    [00:48:01]
+                    It is hard to delete code you shouldn't have written, such as your own ORM.
+                    Need to balance between fighting frameworks and the "not invented here" syndrome.
+                </p>
+                <p>
+                    [00:51:30]
+                    You are not your code.
+                    Deleting code does not diminish who you are nor the value you provide.
+                </p>
+                <p>
+                    [00:53:40]
+                    Outtro
+                </p>
+
+                References:
+                <ul class="txt">
+                    <li><a href="https://www.industriallogic.com/blog/whats-this-about-micro-commits/">What's this about Micro-commits?</a>
+                    <li><a href="https://github.com/emilybache/GildedRose-Refactoring-Kata">Gilded Rose Refactoring Kata</a>
+                    <li><a href="https://allan-stewart.github.io/constraints/">Constraints</a>
+                </ul>
+
+                <span class="dir">~/podcast</span>
+                $ cat copyright.txt
+                <p>Copyright &copy; 2021 - Crafting Code Podcast</p>
+            </div>
+        </div>
+    </body>
+</html>
