@@ -1,0 +1,129 @@
+<html>
+    <head>
+        <title>Crafting Code Podcast</title>
+        <link rel="stylesheet" href="../style.css" />
+        <link rel="icon" href="/logo-90.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/logo-180.png">
+        <link rel="apple-touch-icon" sizes="90x90" href="/logo-90.png">
+        <meta property="og:title" content="Crafting Code Podcast - Episode 8 - Test Driven Development" />
+        <meta property="og:description" content="TDD is one of the most powerful, professional practices we are aware of for designing code. It provides a consistent way to make sure you solve the problem at hand while naturally improving your code quality. This episode takes a deep dive into your hosts' thoughts on the practice." />
+        <meta property="og:image" content="https://crafting-code-podcast.github.io/logo-90.png" />
+    </head>
+    <body>
+        <div class="content">
+            <h1><a href="/index.html">Crafting Code Podcast</a></h1>
+            <div class="terminal">
+                <nav>
+                    <span class="dir">~/podcast</span>
+                    $ ls
+                    <ul>
+                        <li>about.txt</li>
+                        <li>copyright.txt</li>
+                        <li><a href="/episodes/index.html">episodes</a></li>
+                        <li><a href="https://d1ohtljhghz8nz.cloudfront.net/feed.xml">rss&#8209;feed</a></li>
+                    </ul>
+                </nav>
+
+                <span class="dir">~/podcast</span>
+                <p>$ cd episodes/008-test-driven-development</p>
+
+                <span class="dir">~/podcast/episodes/008-test-driven-development</span>
+                $ ls -1a
+                <div class="listing">
+                    <a href="">.</a>
+                    <a href="./index.html">..</a>
+                    episode-summary.txt
+                    <a href="https://d1ohtljhghz8nz.cloudfront.net/episodes/008-test-driven-development.mp3" class="script">get-mp3.sh</a>
+                </div>
+
+                <span class="dir">~/podcast/episodes</span>
+                $ cat episode-summary.txt
+                <p>
+                    TDD is one of the most powerful, professional practices we are aware of for designing code.
+                    It provides a consistent way to make sure you solve the problem at hand while naturally improving your code quality.
+                    This episode takes a deep dive into your hosts' thoughts on the practice.
+                </p>
+
+                <p>Timestamps</p>
+                <p>
+                    [00:00:00]
+                    Host introductions.
+                    TDD means you write tests first.
+                    It is a code design methodology.
+                </p>
+                <p>
+                    [00:07:33]
+                    The refactoring part of TDD lets you improve "clamped down" code.
+                    "The devil is in the details, and in software it's all details!"
+                    Testing-after leads to brittle tests with a lot of setup.
+                </p>
+                <p>
+                    [00:14:37]
+                    TDD is a professional way of coding.
+                    Your business should want you to practice TDD so you can maintain a sustainable development pace.
+                    A regression suite is a side-effect of TDD.
+                </p>
+                <p>
+                    [00:19:19]
+                    TDD helps you write more composable code rather than reusable code.
+                    Focus on solving the problem; don't make a sewing machine for your basketball shoes.
+                </p>
+                <p>
+                    [00:23:55]
+                    Applying TDD to the testing pyramid, not just unit testing.
+                    "Am I using the dependency correctly" as a definition for integration tests.
+                    Can you store an entity in the database and then get it back?
+                </p>
+                <p>
+                    [00:27:28]
+                    Test the code you own; don't test 3rd party code.
+                    Don't put logic in your persistance layer.
+                    Databases are generally harder to scale than your web application tier.
+                </p>
+                <p>
+                    [00:31:29]
+                    Fewer tests as you move up the testing pyramid.
+                    Avoid asserting everything in your tests, especially if you are using mocks.
+                </p>
+                <p>
+                    [00:33:24]
+                    How do you get started with TDD?
+                    Practice with small katas or pieces, not with the full complexity of your production code.
+                    "Test-driving would never result in code this bad."
+                    Add tests to a codebase a little at a time.
+                </p>
+                <p>
+                    [00:39:35]
+                    Web frameworks have improved, but can still be very difficult to test.
+                    Extract your logic to a place that is easier to test.
+                </p>
+                <p>
+                    [00:41:37]
+                    What if your team members aren't practicing TDD... or even testing?
+                    TDD might still be helpful (even if you throw the tests away after!), as long as your code isn't too divergent.
+                </p>
+                <p>
+                    [00:47:42]
+                    Get buy-in from your team and use CI.
+                    "Change your company or change your company."
+                    TDD creates a "10x developer" system.
+                    Can you have a productive partnership with the other developers in your team?
+                </p>
+                <p>
+                    [00:52:21]
+                    Don't be dogmatic: times and places where NOT to TDD?
+                    Separating out your business logic cannot be overstated.
+                    Context matters; what type of work are you doing?
+                </p>
+                <p>
+                    [01:03:22]
+                    Outtro
+                </p>
+
+                <span class="dir">~/podcast</span>
+                $ cat copyright.txt
+                <p>Copyright &copy; 2021 - Crafting Code Podcast</p>
+            </div>
+        </div>
+    </body>
+</html>
