@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <title>Crafting Code Podcast</title>
+        <link rel="stylesheet" href="../style.css" />
+        <link rel="icon" href="/logo-90.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/logo-180.png">
+        <link rel="apple-touch-icon" sizes="90x90" href="/logo-90.png">
+        <meta property="og:title" content="Crafting Code Podcast - Episode 9 - Coupling & Cohesion" />
+        <meta property="og:description" content="Coupling and cohesion are fundamental concepts in software systems. From types of coupling to Conway's Law, Matt and Allan (sans Dave) discuss how these two ideas can affect your day to day work beyond just the formal definitions." />
+        <meta property="og:image" content="https://crafting-code-podcast.github.io/logo-90.png" />
+    </head>
+    <body>
+        <div class="content">
+            <h1><a href="/index.html">Crafting Code Podcast</a></h1>
+            <div class="terminal">
+                <nav>
+                    <span class="dir">~/podcast</span>
+                    $ ls
+                    <ul>
+                        <li>about.txt</li>
+                        <li>copyright.txt</li>
+                        <li><a href="/episodes/index.html">episodes</a></li>
+                        <li><a href="https://d1ohtljhghz8nz.cloudfront.net/feed.xml">rss&#8209;feed</a></li>
+                    </ul>
+                </nav>
+
+                <span class="dir">~/podcast</span>
+                <p>$ cd episodes/009-coupling-and-cohesion</p>
+
+                <span class="dir">~/podcast/episodes/009-coupling-and-cohesion</span>
+                $ ls -1a
+                <div class="listing">
+                    <a href="">.</a>
+                    <a href="./index.html">..</a>
+                    episode-summary.txt
+                    <a href="https://d1ohtljhghz8nz.cloudfront.net/episodes/009-coupling-and-cohesion.mp3" class="script">get-mp3.sh</a>
+                </div>
+
+                <span class="dir">~/podcast/episodes</span>
+                $ cat episode-summary.txt
+                <p>
+                    Coupling and cohesion are fundamental concepts in software systems.
+                    From types of coupling to Conway's Law, Matt and Allan (sans Dave) discuss how these two ideas can affect your day to day work beyond just the formal definitions.
+                </p>
+
+                <p>Timestamps</p>
+                <p>
+                    [00:00:00]
+                    Host introductions.
+                    Formal definitions of coupling and cohesion versus how they affect you day to day.
+                    When something goes down, what goes down with it?
+                    What can you take away?
+                </p>
+                <p>
+                    [00:04:50]
+                    Coupling example: molecular models / tinker toys.
+                    How you connect defines where you are rigid and where you can flex / turn.
+                    Another example: swiss army knife (or multi-tool).
+                </p>
+                <p>
+                    [00:11:13]
+                    "Wouldn't it be cool if..." leads to coupling.
+                    Matt's multi-tool story.
+                    Cohesion and coupling can be emergent.
+                </p>
+                <p>
+                    [00:17:22]
+                    You have to have some kind of coupling.
+                    You have to optimize / balance for your situation.
+                    Don't get lost in trying to manage coupling & cohesion, especially in a small project.
+                </p>
+                <p>
+                    [00:24:37]
+                    There are many types of coupling.
+                    HTTP calls as a form of temporal coupling.
+                    What needs to be online at the same time for your system to work?
+                </p>
+                <p>
+                    [00:31:00]
+                    Data coupling.
+                    Protect the structures that you care about, and use a translation layer (anti-corruption) on the edges
+                    There are reasons why breaking up the data is important, even if it is less convenient for data professionals.
+                </p>
+                <p>
+                    [00:36:14]
+                    Is there value in measuring coupling?
+                    It can be a useful signal or lagging indicator, but don't be the static analysis cop.
+                    Remember you're seeing only a cross section of the system.
+                </p>
+                <p>
+                    [00:40:43]
+                    Coupling and cohesion affect architectures.
+                    DDD & hexagonal architecture concepts.
+                    The database is incidental.
+                    Protect business logic.
+                </p>
+                <p>
+                    [00:44:12]
+                    Anything that affects architecture also effects the people: Conway's Law.
+                    How do you organize your people for coupling & cohesion?
+                    Engineers who are in the code a lot can help design people orgs.
+                </p>
+                <p>
+                    [00:49:34]
+                    Cohesion in organizations: how many groups do you need to involve to make a change?
+                    What are you trying to achieve?
+                </p>
+                <p>
+                    [00:53:12]
+                    Matt's closing thoughts:
+                    Couple slowly and with intention.
+                    Too DRY can chafe.
+                    Don't get stuck trying to find the perfect decoupling or cohesion.
+                </p>
+                <p>
+                    [00:57:29]
+                    Outtro
+                </p>
+
+                <span class="dir">~/podcast</span>
+                $ cat copyright.txt
+                <p>Copyright &copy; 2021 - Crafting Code Podcast</p>
+            </div>
+        </div>
+    </body>
+</html>
