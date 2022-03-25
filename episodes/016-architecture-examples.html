@@ -1,0 +1,124 @@
+<html>
+    <head>
+        <title>Crafting Code Podcast</title>
+        <link rel="stylesheet" href="../style.css" />
+        <link rel="icon" href="/logo-90.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/logo-180.png">
+        <link rel="apple-touch-icon" sizes="90x90" href="/logo-90.png">
+        <meta property="og:title" content="Crafting Code Podcast - Episode 16 - Architecture Examples" />
+        <meta property="og:description" content="Software architectures are generally described in broad strokes that make them generally applicable and easier to understand. But this is a lossy process. Whether or not an architecture is good or bad depends on context. So in this episode, Matt, Dave, and Allan share some examples of systems we've worked in to help illustrate architectural decisions." />
+        <meta property="og:image" content="https://crafting-code-podcast.github.io/logo-90.png" />
+    </head>
+    <body>
+        <div class="content">
+            <h1><a href="/index.html">Crafting Code Podcast</a></h1>
+            <div class="terminal">
+                <nav>
+                    <span class="dir">~/podcast</span>
+                    $ ls
+                    <ul>
+                        <li>about.txt</li>
+                        <li>copyright.txt</li>
+                        <li><a href="/episodes/index.html">episodes</a></li>
+                        <li><a href="https://d1ohtljhghz8nz.cloudfront.net/feed.xml">rss&#8209;feed</a></li>
+                    </ul>
+                </nav>
+
+                <span class="dir">~/podcast</span>
+                <p>$ cd episodes/016-architecture-examples</p>
+
+                <span class="dir">~/podcast/episodes/016-architecture-examples</span>
+                $ ls -1a
+                <div class="listing">
+                    <a href="">.</a>
+                    <a href="./index.html">..</a>
+                    episode-summary.txt
+                    <a href="https://d1ohtljhghz8nz.cloudfront.net/episodes/016-architecture-examples.mp3" class="script">get-mp3.sh</a>
+                </div>
+
+                <span class="dir">~/podcast/episodes</span>
+                $ cat episode-summary.txt
+                <p>
+                    Software architectures are generally described in broad strokes that make them generally applicable and easier to understand.
+                    But this is a lossy process.
+                    Whether or not an architecture is good or bad depends on context.
+                    So in this episode, Matt, Dave, and Allan share some examples of systems we've worked in to help illustrate architectural decisions.
+                </p>
+
+                <p>Timestamps</p>
+                <p>
+                    [00:00:00]
+                    Host introductions.
+                    Thanks to Todd Fisher for our new podcast music which debuted last episode!
+                    In this episode we want to provide the context of specific examples to discuss architectural principles.
+                </p>
+                <p>
+                    [00:01:43]
+                    Architecture example: small restaurant inventory software built using an access database.
+                    Point-of-sale computers connecting to a Handspring Visor presented some interesting constraints.
+                    Uploading files via FTP for live debugging.
+                </p>
+                <p>
+                    [00:07:16]
+                    Architecture example: distributed system using a message broker.
+                    Inconsistencies between teams using event notification vs. event-carried state transfer.
+                </p>
+                <p>
+                    [00:11:45]
+                    Architecture example: Trying to Find Product-Market Fit architecture.
+                    Matt abandoned some usual practices like TDD!?
+                    The architecture fit the constraint of having little time and money.
+                    Managing change is an important part of your architecture.
+                </p>
+                <p>
+                    [00:16:55]
+                    Dave usually rails against tools that let you build quickly and maintain poorly...
+                    but sometimes it's easier to just start over each time.
+                    Context is king; in some cases the "best practice" is not what you need.
+                    Matt still loves TDD, and "You do need to do TDD" is the context-free answer.
+                </p>
+                <p>
+                    [00:20:12]
+                    Architecture example: using MVC pattern for RIA educational templates.
+                    MVC allowed the Product team to re-skin often, but other developers did not understand the code.
+                    It became a "Hard-to-Transfer architecture."
+                    The problem happens regardless of who was "right" -- being "right" doesn't correlate w/ business success.
+                </p>
+                <p>
+                    [00:29:07]
+                    Architecture example: introducing a message broker which was too complicated for the team of developers.
+                    We all have to learn; Dave gives an example of his first experiences with ASP.NET and MVP patterns.
+                    It takes a lot of work to level up; therefore the level of expertise of the engineers you hire is a strategic business choice.
+                    The system has to be habitable.
+                    Junior developers might need restrictions that make senior developers chafe.
+                </p>
+                <p>
+                    [00:40:30]
+                    Architecture example: "Smart-ish pipes architecture" which used WCF (.NET) to communicate across the distributed system.
+                    Sometimes there are reasons that move us away from "obvious" beliefs such as "dumb pipes" always being the right thing.
+                    Some decisions can help reify a constraint (in this case, WCF meant all the developers would write .NET code).
+                </p>
+                <p>
+                    [00:48:22]
+                    Architecture example: using a JWT for authentication as we broke up a monolith.
+                    The driving requirement of high availability enabled a lot of transformation, but later we had to reevaluate that decision.
+                    Decisions have consequences; challenge your assumptions.
+                    Architectures are not static.
+                </p>
+                <p>
+                    [00:57:56]
+                    Summary & outro.
+                </p>
+                
+                Article referenced in this episode:
+                <ul class="txt">
+                    <li><a href="https://martinfowler.com/articles/201701-event-driven.html">What do you mean by "Event-Driven"?</a> by Martin Fowler</li>
+                </ul>
+                
+                <span class="dir">~/podcast</span>
+                $ cat copyright.txt
+                <p>Copyright &copy; 2022 - Crafting Code Podcast</p>
+            </div>
+        </div>
+    </body>
+</html>
