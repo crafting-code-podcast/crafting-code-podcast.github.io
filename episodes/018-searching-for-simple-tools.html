@@ -1,0 +1,136 @@
+<html>
+    <head>
+        <title>Crafting Code Podcast</title>
+        <link rel="stylesheet" href="../style.css" />
+        <link rel="icon" href="/logo-90.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/logo-180.png">
+        <link rel="apple-touch-icon" sizes="90x90" href="/logo-90.png">
+        <meta property="og:title" content="Crafting Code Podcast - Episode 18 - Searching for Simple Tools" />
+        <meta property="og:description" content="Will using simple tools help you keep your codebase simple? In this episode, your hosts try to draw a distinction between simplicity and ease, then examine how they apply to the tools we use to write code. Unfortunately, simplicity and complexity depend on what level of abstraction you're working at. Sometimes we choose to trade simplicity for easiness, or visa-versa. And maybe there are some simple tools that make your coding life both difficult and complex!" />
+        <meta property="og:image" content="https://crafting-code-podcast.github.io/logo-90.png" />
+    </head>
+    <body>
+        <div class="content">
+            <h1><a href="/index.html">Crafting Code Podcast</a></h1>
+            <div class="terminal">
+                <nav>
+                    <span class="dir">~/podcast</span>
+                    $ ls
+                    <ul>
+                        <li>about.txt</li>
+                        <li>copyright.txt</li>
+                        <li><a href="/episodes/index.html">episodes</a></li>
+                        <li><a href="https://d1ohtljhghz8nz.cloudfront.net/feed.xml">rss&#8209;feed</a></li>
+                    </ul>
+                </nav>
+
+                <span class="dir">~/podcast</span>
+                <p>$ cd episodes/018-searching-for-simple-tools</p>
+
+                <span class="dir">~/podcast/episodes/018-searching-for-simple-tools</span>
+                $ ls -1a
+                <div class="listing">
+                    <a href="">.</a>
+                    <a href="./index.html">..</a>
+                    episode-summary.txt
+                    <a href="https://d1ohtljhghz8nz.cloudfront.net/episodes/018-searching-for-simple-tools.mp3" class="script">get-mp3.sh</a>
+                </div>
+
+                <span class="dir">~/podcast/episodes</span>
+                $ cat episode-summary.txt
+                <p>
+                    Will using simple tools help you keep your codebase simple?
+                    In this episode, your hosts try to draw a distinction between simplicity and ease,
+                    then examine how they apply to the tools we use to write code.
+                    Unfortunately, simplicity and complexity depend on what level of abstraction you're working at.
+                    Sometimes we choose to trade simplicity for easiness, or visa-versa.
+                    And maybe there are some simple tools that make your coding life both difficult and complex!
+                </p>
+
+                <p>Timestamps</p>
+                <p>
+                    [00:00:00]
+                    Host introductions.
+                    Borrowing definitions from a talk called "Simple Made Easy": easy = familiar, simple = few things not complected.
+                    How much can you keep in your mind at one time?
+                    Is git a simple or complex tool?
+                </p>
+                <p>
+                    [00:08:20]
+                    Why does this matter?
+                    "The complexity of your tools is a comment on the complexity of your code."
+                    Hypothesis: the tool you're using will shape how you think about the problem and subsequently impact your code.
+                    Does the IDE make it easy to do something that doesn't fit your problem?
+                    Essential complexity vs. accidental complexity.
+                    If you scaffold w/ a framework, you immediately get a lot of code before you even start writing your own code.
+                </p>
+                <p>
+                    [00:19:19]
+                    Separate things that change for different reasons because if they're braided together it's difficult to change just one.
+                    Simple tools can be independently swapped out.
+                    Loose coupling leads to less complexity?
+                    Single responsibility & composability matter with tools, not just code.
+                    What are you responsible for? What are you delegating/deferring to a 3rd party?
+                </p>
+                <p>
+                    [00:25:27]
+                    What do you gain by reducing complexity?
+                    Does the purpose of the tool impact the amount of complexity you accept?
+                    Some scenarios call for more complex tools: e.g. a big IDE for a big C#/Java codebase.
+                    Start w/ the simplest thing and then iterate.
+                </p>
+                <p>
+                    [00:33:40]
+                    Time plays into this equation.
+                    Low code solutions might make it easy to do complicated things quickly, but will the scope change?
+                    What level of complexity are you willing to accept?
+                    There's a context to who is doing the work.
+                    Things we do to make things easier often add complexity.
+                    There is no such thing as simple software; nobody is actually "full stack."
+                </p>
+                <p>
+                    [00:39:48]
+                    Matt shares his current situation: coding in VIM, command-line git, cloud provider CLI tool.
+                    It's not easy, but it is simple.
+                    These constraints are affecting how he writes code: especially size of files.
+                    You might have to experiment to learn how much complexity you ought to take on.
+                    Abstraction becomes key: you have to complect code eventually.
+                    Is tying your shoes the interaction between billions of atoms or is it just one action?
+                </p>
+                <p>
+                    [00:48:09]
+                    Working in the small.
+                    There's an art to what should be complected.
+                    Example of essential complexity: calculating leap year
+                    Complex is also related to familiarity.
+                    All software looks complex to a novice.
+                    Is there a hidden link between simple and easy? Perhaps they are not completely orthogonal?
+                </p>
+                <p>
+                    [00:55:57]
+                    You need to get clear on what complexity means to you in your specific situation if you're going to make decisions around it.
+                    Is the P`` language simple because it only has a few operators, or is it complex because you have to complect those operators so much?
+                    We might choose more complicated tools in order to get simpler code.
+                    You might just have to use a gut feeling, especially when there are so many levels of abstraction.
+                    Lots of complexity is hidden from you behind abstractions.
+                </p>            
+                <p>
+                    [01:04:20]
+                    Summary: prefer simple and easy while avoiding complex and difficult.
+                    Outro.
+                </p>
+                
+                References in this episode:
+                <ul class="txt">
+                    <li><a href="https://www.youtube.com/watch?v=SxdOUGdseq4">"Simple Made Easy" by Rich Hickey</a></li>
+                    <li><i>The Design of Everyday Things</i> by Don Norman</li>
+                    <li><a href="https://en.wikipedia.org/wiki/P%E2%80%B2%E2%80%B2">P`` programming language</a></li>
+                </ul>
+                
+                <span class="dir">~/podcast</span>
+                $ cat copyright.txt
+                <p>Copyright &copy; 2022 - Crafting Code Podcast</p>
+            </div>
+        </div>
+    </body>
+</html>
