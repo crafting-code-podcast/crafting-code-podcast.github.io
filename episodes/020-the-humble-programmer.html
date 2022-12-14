@@ -1,0 +1,157 @@
+<html>
+    <head>
+        <title>Crafting Code Podcast</title>
+        <link rel="stylesheet" href="../style.css" />
+        <link rel="icon" href="/logo-90.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/logo-180.png">
+        <link rel="apple-touch-icon" sizes="90x90" href="/logo-90.png">
+        <meta property="og:title" content="Crafting Code Podcast - Episode 20 - The Humble Programmer" />
+        <meta property="og:description" content="The works of Edsger W. Dijkstra have made a huge impact on the software industry. In this episode, your hosts dive into his paper, The Humble Programmer, to discuss how well it holds up to today's programming world. We cover hardware, cleverness, abstraction, proofs, and more. Even when we disagree with his specifics, we find ourselves still nodding in general agreement." />
+        <meta property="og:image" content="https://crafting-code-podcast.github.io/logo-90.png" />
+    </head>
+    <body>
+        <div class="content">
+            <h1><a href="/index.html">Crafting Code Podcast</a></h1>
+            <div class="terminal">
+                <nav>
+                    <span class="dir">~/podcast</span>
+                    $ ls
+                    <ul>
+                        <li>about.txt</li>
+                        <li>copyright.txt</li>
+                        <li><a href="/episodes/index.html">episodes</a></li>
+                        <li><a href="https://d1ohtljhghz8nz.cloudfront.net/feed.xml">rss&#8209;feed</a></li>
+                    </ul>
+                </nav>
+
+                <span class="dir">~/podcast</span>
+                <p>$ cd episodes/020-the-humble-programmer</p>
+
+                <span class="dir">~/podcast/episodes/020-the-humble-programmer</span>
+                $ ls -1a
+                <div class="listing">
+                    <a href="">.</a>
+                    <a href="./index.html">..</a>
+                    episode-summary.txt
+                    <a href="https://d1ohtljhghz8nz.cloudfront.net/episodes/020-the-humble-programmer.mp3" class="script">get-mp3.sh</a>
+                </div>
+
+                <span class="dir">~/podcast/episodes</span>
+                $ cat episode-summary.txt
+                <p>
+                    The works of Edsger W. Dijkstra have made a huge impact on the software industry.
+                    In this episode, your hosts dive into his paper, <i>The Humble Programmer</i>,
+                    to discuss how well it holds up to today's programming world.
+                    We cover hardware, cleverness, abstraction, proofs, and more.
+                    Even when we disagree with his specifics, we find ourselves still nodding in general agreement.
+                </p>
+
+                <p>Timestamps</p>
+                <p>
+                    [00:00:00]
+                    Host introductions.
+                    A short introduction to Edsger W. Dijkstra.
+                </p>
+                <p>
+                    [00:04:12]
+                    A brief summary of Dijkstra's paper.
+                </p>
+                <p>
+                    [00:06:26]
+                    Hardware vs software expenses over time.
+                    Most developers no longer care much about specific instruction sets.
+                    "Giant" computers and the software crisis.
+                    Visible machines vs. invisible software.
+                </p>
+                <p>
+                    [00:14:23]
+                    "Computer programmer" was not yet a profession.
+                    Changing software because machines changed vs. because the product needs change.
+                    The impact of technical decisions on business (and business decisions on technical: re-orgs).
+                </p>
+                <p>
+                    [00:20:56]
+                    The mindset of programmers, then and now.
+                    Avoid clever tricks; save cleverness for understanding and solving a problem.
+                    Don't use clever tools or be clever in code.
+                </p>
+                <p>
+                    [00:26:23]
+                    "Nicely factored" problems.
+                    Work on the problem until a simple solution falls out.
+                    Code is intended to communicate with other people, and cleverness is not good communication.
+                    You have to take apart the one-liners anyway.
+                </p>
+                <p>
+                    [00:30:25]
+                    Abstraction.
+                    Is tying your shoes one thing or billions of interactions?
+                    Abstractions create concise & precise ways to communicate.
+                    Conceptual complexity & ubiquitous language.
+                    "Check out the basket."
+                </p>
+                <p>
+                    [00:36:46]
+                    People systems and exponentially increasing lines of communication.
+                    What if you had to talk about bits stored on disk when you have 3 teams in a room?
+                    Messy code abstractions make it difficult both to code and to talk with the business stakeholders.
+                </p>
+                <p>
+                    [00:40:59]
+                    The process of creation is messy (e.g. startups).
+                    Growing a proof of correctness.
+                    Discipline. The process can be messy; don't let your code also be messy.
+                    Matt's disciplines of TDD & REPL-driven-development.
+                </p>
+                <p>
+                    [00:48:31]
+                    Proofs vs. testing.
+                    Natural variation in things like I/O make programs almost impossible to prove.
+                    Building confidence in the code.
+                    Automated tests may not always be worth investing in (but if you're not sure, write the tests).
+                </p>
+                <p>
+                    [00:54:30]
+                    Better tools don't mean programming gets easier, because we try new and more difficult things.
+                    How can we keep our programs within our intellectual control?
+                    Wittgenstein and the limits of thought to express the inexpressible.
+                    Simplicity & complecting.
+                </p>
+                <p>
+                    [01:00:07]
+                    Tuning a guitar E string.
+                    "Downtuning" your tools, then bringing them up to "just enough."
+                    Ian Malcolm quotes.
+                    Debugging after the fact.
+                </p>
+                <p>
+                    [01:05:08]
+                    Progress in software development by accepting restrictions.
+                    What will be the next restriction?
+                    Go generics as a study in limiting complexity.
+                    Get rid of tools which are no longer useful / appropriate.
+                </p>
+                <p>
+                    [01:08:07]
+                    Education teaser.
+                    Summary: be very humble programmers.
+                </p>
+                <p>
+                    [01:09:14]
+                    Outro
+                </p>
+
+                References in this episode:
+                <ul class="txt">
+                    <li><a href="https://dl.acm.org/doi/pdf/10.1145/355604.361591?download=true"><i>The Humble Programmer</i></a> by Edsger W. Dijkstra</li>
+                    <li>Martin Fowler's <a href="https://martinfowler.com/articles/is-quality-worth-cost.html">kitchen metaphor</a></li>
+                    <li><i>Tractatus</i> by <a href="https://en.wikipedia.org/wiki/Ludwig_Wittgenstein">Wittgenstein</a></li>
+                </ul>
+                
+                <span class="dir">~/podcast</span>
+                $ cat copyright.txt
+                <p>Copyright &copy; 2022 - Crafting Code Podcast</p>
+            </div>
+        </div>
+    </body>
+</html>
