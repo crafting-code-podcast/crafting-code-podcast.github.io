@@ -1,0 +1,177 @@
+<html>
+    <head>
+        <title>Crafting Code Podcast</title>
+        <link rel="stylesheet" href="../style.css" />
+        <link rel="icon" href="/logo-90.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/logo-180.png">
+        <link rel="apple-touch-icon" sizes="90x90" href="/logo-90.png">
+        <meta property="og:title" content="Crafting Code Podcast - Episode 21 - Crafting Katas" />
+        <meta property="og:description" content="In this episode, your hosts (finally!) share some actual code examples to illustrate some of our thoughts about crafting code. Follow along with the code at https://github.com/crafting-code-podcast/crafting-katas as we discuss how we implemented Conway's Game of Life in multiple languages. Testing strategies, optimizations, and feedback loops all demonstrate that crafting code is ultimately an iterative process." />
+        <meta property="og:image" content="https://crafting-code-podcast.github.io/logo-90.png" />
+    </head>
+    <body>
+        <div class="content">
+            <h1><a href="/index.html">Crafting Code Podcast</a></h1>
+            <div class="terminal">
+                <nav>
+                    <span class="dir">~/podcast</span>
+                    $ ls
+                    <ul>
+                        <li>about.txt</li>
+                        <li>copyright.txt</li>
+                        <li><a href="/episodes/index.html">episodes</a></li>
+                        <li><a href="https://d1ohtljhghz8nz.cloudfront.net/feed.xml">rss&#8209;feed</a></li>
+                    </ul>
+                </nav>
+
+                <span class="dir">~/podcast</span>
+                <p>$ cd episodes/021-crafting-katas</p>
+
+                <span class="dir">~/podcast/episodes/021-crafting-katas</span>
+                $ ls -1a
+                <div class="listing">
+                    <a href="">.</a>
+                    <a href="./index.html">..</a>
+                    episode-summary.txt
+                    <a href="https://d1ohtljhghz8nz.cloudfront.net/episodes/021-crafting-katas.mp3" class="script">get-mp3.sh</a>
+                </div>
+
+                <span class="dir">~/podcast/episodes</span>
+                $ cat episode-summary.txt
+                <p>
+                    In this episode, your hosts (finally!) share some actual code examples
+                    to illustrate some of our thoughts about crafting code.
+                    Follow along with the code at https://github.com/crafting-code-podcast/crafting-katas
+                    as we discuss how we implemented Conway's Game of Life in multiple languages.
+                    Testing strategies, optimizations, and feedback loops all demonstrate that
+                    crafting code is ultimately an iterative process.
+                </p>
+
+                <p>Timestamps</p>
+                <p>
+                    [00:00:00]
+                    Host introductions.
+                    Overview of Conway's Game of Life
+                </p>
+                <p>
+                    [00:03:20]
+                    Link to the repo: <a href="https://github.com/crafting-code-podcast/crafting-katas">https://github.com/crafting-code-podcast/crafting-katas</a>
+                    Rules in the readme.
+                    Separate branches for each implementation we tried.
+                </p>
+                <p>
+                    [00:04:03]
+                    The allan-csharp branch.
+                    See the commit history for small steps.
+                    GoL patterns (e.g. glider or boat).
+                    Implementation details altered the tests during a reuse attempt.
+                    TDD gives you a context that constrains you.
+                </p>
+                <p>
+                    [00:10:15]
+                    Matt liked the patterns & probing of the domain for tests.
+                    Discussed performance optimizations.
+                    Very deep problem because the game of life is turing complete.
+                </p>
+                <p>
+                    [00:14:09]
+                    Nobody remembers how to do a 2D array off-hand.
+                    More about optimizations.
+                    Tests you start with drive your implementation.                    
+                </p>
+                <p>
+                    [00:17:34]
+                    It is good to add code which makes your life easier during testing / development.
+                    Public methods that are not on an interface.
+                    Similar strategies in other languages, e.g. Go test packages.
+                    Total value being delivered includes the tests.
+                </p>
+                <p>
+                    [00:20:36]
+                    Interface vs. implementation concept.
+                    Duck typing (a.k.a structural typing).
+                </p>
+                <p>
+                    [00:23:22]
+                    The matt-python branch.
+                    A 3x3 grid w/ wrapping via REPL-driven development.
+                    False start on testing the generate function; fell back to testing neighbors.
+                    It is okay to have multiple asserts per test.
+                </p>
+                <p>
+                    [00:27:17]
+                    It's common to think the code will go a certain way, but you end up doing it differently as you break it down.
+                    Immerse yourself in the problem and let your subconscious help you work it out.
+                    Being wrong will get you closer to being right. Feedback.
+                    It's not about not making mistakes. Use feedback loops and barriers to guard against mistakes.
+                </p>
+                <p>
+                    [00:33:22]
+                    Iterate because you can't guess right.
+                    Don't lead with picking a certain pattern.
+                    Emergent properties (evolving architecture).
+                </p>
+                <p>
+                    [00:35:58]
+                    Overloaded the term "state": test state vs. cell state.
+                    Optimized for conceptual simplicity (readability), not performance.
+                    Optimization is a trade-off; what happens if the rules change if you optimized?
+                    Default grid function was used for convenience in the REPL, then became helpful to use.
+                    Classic blunder: mutable data.
+                </p>
+                <p>
+                    [00:42:13]
+                    The dave-csharp branch.
+                    Table-driven (NUnit TestCase) tests of the rules for quick win.
+                    Emergence of "population" driven by testing.
+                    Dave avoided the problem Matt fell into because he'd been burned by that same problem before.
+                </p>
+                <p>
+                    [00:50:18]
+                    Classic vs. mockist development.
+                    Verification of a behavior.
+                    A bug in the test.
+                    It is easy to accidentally test mocks, but on the other hand, mocking allows you to use different rules w/ the same world engine.
+                </p>
+                <p>
+                    [00:54:41]
+                    Acceptance testing.
+                    Creating "more code" isn't always bad.
+                    Tests should be express clearly, not cleverly.
+                    Different types of tests have different purposes.
+                </p>
+                <p>
+                    [01:03:20]
+                    The allan-javascript branch.
+                    Borrowed ideas from Dave and Matt.
+                    If we had been pairing, we could have made it even better.
+                    The virtue of a lazy developer.
+                </p>
+                <p>
+                    [01:08:17]
+                    The dave-go branch.
+                    Dave only did the rules -- that was the only thing the spec asked for!
+                    Table-testing and learning enumerations in GoLang.
+                </p>
+                <p>
+                    [01:11:11]
+                    If you get the opportunity to go to a code retreat, do it.
+                    Crafting code is a process, not a destination.
+                </p>
+                <p>
+                    [01:12:30]
+                    Outro
+                </p>
+
+                References in this episode:
+                <ul class="txt">
+                    <li><a href="https://github.com/crafting-code-podcast/crafting-katas">https://github.com/crafting-code-podcast/crafting-katas</a></li>
+                </ul>
+                
+                <span class="dir">~/podcast</span>
+                $ cat copyright.txt
+                <p>Copyright &copy; 2023 - Crafting Code Podcast</p>
+            </div>
+        </div>
+    </body>
+</html>
