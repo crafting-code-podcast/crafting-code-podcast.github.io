@@ -1,0 +1,141 @@
+<html>
+    <head>
+        <title>Crafting Code Podcast</title>
+        <link rel="stylesheet" href="../style.css" />
+        <link rel="icon" href="/logo-90.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/logo-180.png">
+        <link rel="apple-touch-icon" sizes="90x90" href="/logo-90.png">
+        <meta property="og:title" content="Crafting Code Podcast - Episode 22 - Fending Off Frameworks" />
+        <meta property="og:description" content="Software frameworks are so useful we can hardly imagine working without them. Yet they have an insidious tendency to invade, corrupt, and wrest control away from us. In this episode, your hosts discuss the good and bad of frameworks and offer some suggestions for keeping them at arm's length." />
+        <meta property="og:image" content="https://crafting-code-podcast.github.io/logo-90.png" />
+    </head>
+    <body>
+        <div class="content">
+            <h1><a href="/index.html">Crafting Code Podcast</a></h1>
+            <div class="terminal">
+                <nav>
+                    <span class="dir">~/podcast</span>
+                    $ ls
+                    <ul>
+                        <li>about.txt</li>
+                        <li>copyright.txt</li>
+                        <li><a href="/episodes/index.html">episodes</a></li>
+                        <li><a href="https://d1ohtljhghz8nz.cloudfront.net/feed.xml">rss&#8209;feed</a></li>
+                    </ul>
+                </nav>
+
+                <span class="dir">~/podcast</span>
+                <p>$ cd episodes/022-fending-off-frameworks</p>
+
+                <span class="dir">~/podcast/episodes/022-fending-off-frameworks</span>
+                $ ls -1a
+                <div class="listing">
+                    <a href="">.</a>
+                    <a href="./index.html">..</a>
+                    episode-summary.txt
+                    <a href="https://d1ohtljhghz8nz.cloudfront.net/episodes/022-fending-off-frameworks.mp3" class="script">get-mp3.sh</a>
+                </div>
+
+                <span class="dir">~/podcast/episodes</span>
+                $ cat episode-summary.txt
+                <p>
+                    Software frameworks are so useful we can hardly imagine working without them.
+                    Yet they have an insidious tendency to invade, corrupt, and wrest control away from us.
+                    In this episode, your hosts discuss the good and bad of frameworks
+                    then offer some suggestions for keeping them at arm's length.
+                </p>
+
+                <p>Timestamps</p>
+                <p>
+                    [00:00:00]
+                    Host introductions.
+                    What is a framework?
+                    Code that calls your code rather than code you call.
+                    Frameworks are important and useful.
+                </p>
+                <p>
+                    [00:05:27]
+                    Why fend off frameworks?
+                    You can easily get too coupled.
+                    It does things TO you, not just FOR you.
+                    The framework may not continue to work for you over time.
+                </p>
+                <p>
+                    [00:09:50]
+                    Frameworks are someone else's code: they can make changes to it.
+                    Keeping frameworks at a distance allows you to get the benefits while mitigating risk.
+                    Frameworks solve generic problems and the authors are not incentivized to solve your problems.
+                </p>
+                <p>
+                    [00:13:16]
+                    When do you follow the framework's way of doing things vs. blazing your own trail?
+                    Is an ORM a framework?
+                    Be careful about blurring the lines between ORM models and domain entities.
+                    What if you need to upgrade your database, but the ORM doesn't support it?
+                    Frameworks bring in a set of constraints.
+                </p>
+                <p>
+                    [00:19:14]
+                    Your system is not about controllers or views or data-access.
+                    Where do you create separations?
+                    Can you swap out the invocation flow or persistance layer?
+                    Most of your domain should be testable without the framework.
+                </p>
+                <p>
+                    [00:22:29]
+                    Frameworks do a lot "for free (TM)", but we tend to only use a few things within a framework.
+                    GoLang doesn't compile if you aren't using it; JavaScript does tree-shaking.
+                    Dependencies are a liability.
+                    Recent(-ish) emergence of supply chain effects in software.
+                    90% rule: the last 10% also takes 90% of the time.
+                </p>
+                <p>
+                    [00:26:30]
+                    Service mesh is basically a framework for microservices; 
+                    it is not really related to the value you're delivering.
+                    Keep your code flexible.
+                </p>
+                <p>
+                    [00:28:11]
+                    Different communities seem to have different levels of comfort about adopting massive frameworks.
+                    Some communities / languages like GoLang seem to be a reaction to having had bad framework experiences.
+                </p>
+                <p>
+                    [00:34:54]
+                    General concepts that help you keep frameworks at bay.
+                    Open-Closed principle, Interface Segregation, Domain Driven Design patterns (like Repository), and Hexagonal architectures.
+                    Understand what's possible!
+                    DDD anti-corruption layer.
+                </p>
+                <p>
+                    [00:38:18]
+                    Matt applies framework abstraction to goal-setting frameworks.
+                    Keep the things that aren't important to your domain away.
+                    If you make a change in one place (postgres driver) it shouldn't affect hundreds of things.
+                    Organizational designers could take a cue from Onion architectures.
+                </p>
+                <p>
+                    [00:42:05]
+                    Common boundaries include: database, HTTP, and front-end JavaScript.
+                    Your JavaScript front-end shouldn't have the same shapes as your back-end and database.
+                </p>
+                <p>
+                    [00:43:38]
+                    More ways to fend off frameworks:
+                    Actor model, dependency injection, mapping layers, composition (a la unix pipes), immutable data structures.
+                    "Side effects: keep them out."
+                    DDD aggregate roots.
+                </p>
+                <p>
+                    [00:50:41]
+                    Summary: frameworks are super useful, but also dangerous, so take care.
+                    Outro
+                </p>
+                
+                <span class="dir">~/podcast</span>
+                $ cat copyright.txt
+                <p>Copyright &copy; 2023 - Crafting Code Podcast</p>
+            </div>
+        </div>
+    </body>
+</html>
