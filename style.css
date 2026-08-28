@@ -73,3 +73,39 @@ ul.txt li {
 ul.txt li::before {
     content: '* ';
 }
+
+summary {
+    color: #ffffff;
+    cursor: pointer;
+    margin-bottom: 18px;
+    display: block;
+    list-style: none;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary:hover {
+    text-decoration: underline;
+}
+
+.enter-icon {
+    width: 0.9em;
+    height: 0.9em;
+    vertical-align: -0.1em;
+    fill: currentColor;
+    margin-left: 0.3em;
+}
+
+.transcript {
+    margin: 18px 0;
+}
+
+.transcript p {
+    margin: 0 0 18px 0;
+}
+
+.ts {
+    color: #ffff55;
+}
