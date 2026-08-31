@@ -74,6 +74,14 @@ ul.txt li::before {
     content: '* ';
 }
 
+ul.txt.refs > li::before {
+    content: none;
+}
+
+ul.txt.refs > li {
+    margin-bottom: 18px;
+}
+
 summary {
     color: #ffffff;
     cursor: pointer;
