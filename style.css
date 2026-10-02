@@ -117,3 +117,40 @@ summary:hover {
 .ts {
     color: #ffff55;
 }
+
+#q {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-bottom: 1px solid #55ffff;
+    font: inherit;
+    width: 60%;
+    min-width: 12em;
+    outline: none;
+}
+
+#q:focus {
+    border-bottom-color: #ffff55;
+}
+
+.hit {
+    margin: 0 0 24px 0;
+}
+
+.hit h2 {
+    font-size: inherit;
+    margin: 0 0 6px 0;
+}
+
+.hit .where {
+    color: #aaaaaa;
+}
+
+.hit blockquote {
+    margin: 0 0 8px 2ch;
+}
+
+mark {
+    background-color: #ffff55;
+    color: #000000;
+}

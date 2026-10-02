@@ -6,8 +6,8 @@
         <link rel="icon" href="/logo-90.png">
         <link rel="apple-touch-icon" sizes="180x180" href="/logo-180.png">
         <link rel="apple-touch-icon" sizes="90x90" href="/logo-90.png">
-        <meta property="og:title" content="Crafting Code Podcast - Theme - Community" />
-        <meta property="og:description" content="Crafting Code Podcast episodes about Community." />
+        <meta property="og:title" content="Crafting Code Podcast - Search" />
+        <meta property="og:description" content="Search every episode's transcript, summary, themes and references." />
         <meta property="og:image" content="https://crafting-code-podcast.github.io/logo-90.png" />
     </head>
     <body>
@@ -29,30 +29,21 @@
                 </nav>
 
                 <span class="dir">~/podcast</span>
-                <p>$ cd themes/community</p>
+                <p>$ cd search</p>
 
-                <span class="dir">~/podcast/themes/community</span>
-                $ ls -1a
-                <div class="listing">
-                    <a href="">.</a>
-                    <a href="./index.html">..</a>
-                    episodes.txt
-                </div>
+                <span class="dir">~/podcast/search</span>
+                <label for="q">$ grep -i</label>
+                <input id="q" type="search" autocomplete="off" autofocus placeholder="a word or phrase" aria-describedby="status" />
+                <p id="status" role="status">Loading the index&hellip;</p>
+                <noscript><p>Search needs JavaScript. You can still browse the <a href="/episodes/index.html">episodes</a>, <a href="/themes/index.html">themes</a> and <a href="/references/index.html">references</a>.</p></noscript>
+                <div id="results"></div>
 
-                <span class="dir">~/podcast/themes/community</span>
-                $ cat episodes.txt
-                <p><strong>Community</strong></p>
-                <div class="listing">
-                    <a href="../episodes/001-crafting-code.html">001 - Crafting Code</a>
-                    <a href="../episodes/007-building-communities.html">007 - Building Communities with Mike Clement</a>
-                    <a href="../episodes/019-sustaining-communities.html">019 - Sustaining Communities</a>
-                    <a href="../episodes/046-open-space-technology.html">046 - Open Space Technology</a>
-                    <a href="../episodes/064-podcast-reflections.html">064 - Podcast Reflections</a>
-                </div>
-
-                <span class="dir">~/podcast/themes/community</span>
-                $ cat ../../copyright.txt
+                <span class="dir">~/podcast/search</span>
+                $ cat ../copyright.txt
                 <p>Copyright &copy; 2026 - Crafting Code Podcast</p>
+
+                <script src="minisearch.min.js"></script>
+                <script src="search.js"></script>
             </div>
         </div>
     </body>
