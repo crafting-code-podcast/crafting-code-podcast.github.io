@@ -37,6 +37,7 @@
                     <a href="">.</a>
                     <a href="./index.html">..</a>
                     episode-summary.txt
+                    published.txt
                     references.txt
                     themes.txt
                     transcript.txt
@@ -133,6 +134,10 @@
                         <p><span class="ts">[00:56:45]</span> <strong>Dave Adsit:</strong> There&#x27;s an outage with a rollback. Right. Treating the database like any other part of your system is critical. And that is one of the things that the CICD pipeline is going to do, right? It&#x27;s going to continuously deploy updates to that system so that it&#x27;s always clean and in a good, healthy state. Date. One of the things that I learned, we learned working together on a project is that you can do zero downtime database migrations and table migrations. You can say, &quot;Hey, here&#x27;s version one, here&#x27;s version two of either the table or the whole database.&quot; We migrated data from one data store to another from, and it wasn&#x27;t even the same type. You know, we migrated data from from a relational data store to a document data store, or actually a wide table data store. We also migrated data from one document database to another. And there&#x27;s a lot of patterns that you can use. We&#x27;ve talked about some of them in the past where there&#x27;s the dual read, single write, or dual write, dual read, compare. I&#x27;m going to return the data from the original database while I&#x27;m tracking the data into the new database. And then I&#x27;m going to return the data from the new database. If it Matt and compare it to the data from the old database. And then eventually you just stop using the old database. Right. Or at least for that, that table. And that is facilitated by having that abstraction layer in your, in your application code, where you say all the data access goes through these repositories. Nobody is doing ad hoc data access anywhere in the code base. It all goes through these repositories. So I&#x27;m going to use these repositories as the choke point for transitioning from database one to database two. And we&#x27;ve talked about this before. We use the decorator pattern. We have three repositories. There&#x27;s the repository for database one, repository for database two. They have the same interface. And there&#x27;s the migrating repository that uses both. And again, same interface. And so from the point of consumption, you don&#x27;t know or care which one you&#x27;re using. All of that is handled inside of that tool. And so those are some of the things that become when you have a persistence ignorant domain model, when you treat the database as a data store instead of as the heart of your application system, you can start to do some of these types of things that make your life a lot easier. Make it easier for you to do the right thing at the right time with the right tool. Sometimes the right tool is a relational database. Sometimes the right tool is a graph database. Sometimes the right tool is a document database. And if you&#x27;ve set yourself up so that you can migrate between them as needed, and you&#x27;re following patterns that allow you to abstract them, then you can use the right one, even when that changes over the life cycle of your application.</p>
                     </div>
                 </details>
+
+                <span class="dir">~/podcast/episodes/072-databases</span>
+                $ cat published.txt
+                <p><time datetime="2026-09-18">Sep 18, 2026</time></p>
 
                 <span class="dir">~/podcast/episodes/072-databases</span>
                 $ cat ../../copyright.txt
