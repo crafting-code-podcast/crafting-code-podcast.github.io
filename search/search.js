@@ -27,13 +27,50 @@
         return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     }
 
+    // MiniSearch's default tokenizer treats "#" as punctuation, so "C#" was
+    // indexed and searched as just "c". Keep a "#" that is glued to a word
+    // ("C#", "F#") as part of that word. Used for both the index and the query.
+    var HASH = "\uE000";
+    var defaultTokenize = MiniSearch.getDefault("tokenize");
+    function tokenize(text, fieldName) {
+        return defaultTokenize(text.replace(/([\p{L}\p{N}])#/gu, "$1" + HASH), fieldName).map(function (t) {
+            return t.split(HASH).join("#");
+        });
+    }
+
+    // Matches a search term only as a whole word: not inside a longer word
+    // ("c" in "because") and not as the front of a longer token ("c" in "C#").
+    // Written without lookbehind, which older iPhones don't support, so the
+    // character before the term is captured as group 1.
+    function termRegex(terms) {
+        if (!terms.length) { return null; }
+        var alternation = terms.slice().sort(function (a, b) { return b.length - a.length; }).map(escRe).join("|");
+        return new RegExp("(^|[^\\p{L}\\p{N}])(" + alternation + ")(?![\\p{L}\\p{N}#+])", "giu");
+    }
+
+    // Text with each whole-word match wrapped in <mark>; everything is escaped
+    // piece by piece, so the term can never match inside an HTML entity.
+    function highlight(text, re) {
+        var out = "";
+        var last = 0;
+        var m;
+        re.lastIndex = 0;
+        while ((m = re.exec(text)) !== null) {
+            var at = m.index + m[1].length;
+            out += esc(text.slice(last, at)) + "<mark>" + esc(m[2]) + "</mark>";
+            last = at + m[2].length;
+        }
+        return out + esc(text.slice(last));
+    }
+
     // Passage text with the matched words highlighted, trimmed to a window
     // around the first match.
     function snippet(text, terms) {
-        var re = terms.length ? new RegExp("(" + terms.map(escRe).join("|") + ")", "gi") : null;
+        var re = termRegex(terms);
         var start = 0;
         if (re) {
-            var first = text.search(re);
+            var m = re.exec(text);
+            var first = m ? m.index + m[1].length : -1;
             if (first > SNIPPET_CHARS / 2) {
                 start = text.lastIndexOf(" ", first - SNIPPET_CHARS / 3) + 1;
             }
@@ -45,11 +82,8 @@
         } else {
             end = text.length;
         }
-        var piece = esc(text.slice(start, end));
-        if (re) {
-            piece = piece.replace(new RegExp("(" + terms.map(function (t) { return escRe(esc(t)); }).join("|") + ")", "gi"), "<mark>$1</mark>");
-        }
-        return (start > 0 ? "&hellip; " : "") + piece + (end < text.length ? " &hellip;" : "");
+        var piece = text.slice(start, end);
+        return (start > 0 ? "&hellip; " : "") + (re ? highlight(piece, re) : esc(piece)) + (end < text.length ? " &hellip;" : "");
     }
 
     function build(json) {
@@ -57,6 +91,7 @@
         mini = new MiniSearch({
             fields: ["title", "summary", "themes", "references", "text"],
             idField: "id",
+            tokenize: tokenize,
             searchOptions: {
                 boost: { title: 3, themes: 2, summary: 1.5, references: 1.5 },
                 prefix: function (term) { return term.length > 2; },
