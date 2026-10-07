@@ -16,6 +16,13 @@
         return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
     }
 
+    // "2025-01-03" -> "Jan 3, 2025". The date is the feed's UTC date, so format it
+    // in UTC; local time would show the day before for some readers.
+    function fmtDate(iso) {
+        var d = new Date(iso + "T00:00:00Z");
+        return isNaN(d.getTime()) ? iso : d.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric", timeZone: "UTC" });
+    }
+
     function escRe(s) {
         return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     }
@@ -117,6 +124,7 @@
             var ep = data.episodes[g.index];
             var where = Object.keys(g.fields).map(function (f) { return f === "text" ? "transcript" : f; });
             var out = '<div class="hit"><h2><a href="/episodes/' + esc(ep.slug) + '.html">Episode ' + ep.n + " - " + esc(ep.title) + "</a></h2>";
+            if (ep.date) { out += '<div class="where">published ' + esc(fmtDate(ep.date)) + "</div>"; }
             if (where.length) { out += '<div class="where">matches the ' + where.join(", ") + "</div>"; }
             g.passages.forEach(function (p) {
                 out += "<blockquote><span class=\"ts\">[" + esc(p.row[1]) + "]</span> <strong>" + esc(p.row[2]) + ":</strong> " + snippet(p.row[3], p.terms) + "</blockquote>";
