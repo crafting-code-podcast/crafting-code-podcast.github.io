@@ -41535,7 +41535,7 @@
       75,
       "00:08:31",
       "Elisabeth Hendrickson",
-      "But there were still, like, points where a developer could be very, very much on the hook to come back and do some work along that path to production. And I'm intentionally alighting away all of the details of this, but I'm sure that you have lived in this world, because this is a very common situation. And so the developers, I was responsible for this part of the organization, and the developers are coming to me saying, \"okay, but we checked in the ticket. We don't want to think about this anymore.\" Well, that's nice, but you're still on the hook until it actually makes it the rest of the way through the gauntlet. You don't get to just ignore it. And that was very much the output rather than outcome perspective."
+      "But there were still, like, points where a developer could be very, very much on the hook to come back and do some work along that path to production. And I'm intentionally eliding away all of the details of this, but I'm sure that you have lived in this world, because this is a very common situation. And so the developers, I was responsible for this part of the organization, and the developers are coming to me saying, \"okay, but we checked in the ticket. We don't want to think about this anymore.\" Well, that's nice, but you're still on the hook until it actually makes it the rest of the way through the gauntlet. You don't get to just ignore it. And that was very much the output rather than outcome perspective."
     ],
     [
       75,
@@ -41553,7 +41553,7 @@
       75,
       "00:10:39",
       "Joel Tosi",
-      "And so you have this idea of noise and latency, which I think just compounds the solution of progress. I would offer up, it happens all the time in product, but it happens in, like, think about when you went to the cloud. \"We're going to go to the cloud because it's going to be cost savings.\" And then we start to forget about the cost savings. And then it's like, well, we went to the cloud to get to the cloud. How many people are in the cloud? Or you're going to do the Agile transformation. And at first it was about Agile transformation for faster feedback and so you can adapt. But because of noise and latency, it becomes how many teams are having standups? And so you get this illusion of progress because noise and latency comes into play."
+      "And so you have this idea of noise and latency, which I think just compounds the illusion of progress. I would offer up, it happens all the time in product, but it happens in, like, think about when you went to the cloud. \"We're going to go to the cloud because it's going to be cost savings.\" And then we start to forget about the cost savings. And then it's like, well, we went to the cloud to get to the cloud. How many people are in the cloud? Or you're going to do the Agile transformation. And at first it was about Agile transformation for faster feedback and so you can adapt. But because of noise and latency, it becomes how many teams are having standups? And so you get this illusion of progress because noise and latency comes into play."
     ],
     [
       75,
@@ -41673,13 +41673,13 @@
       75,
       "00:22:07",
       "Joel Tosi",
-      "I've been with groups where it's like, you know, \"testing is flaky\" and all these kinds of things. And it's like, \"well, it's flaky because of upstream and downstream dependencies. And it's flaky because the other team messed it up. And it's flaky because of all these things.\" But it's like, we just kind of lay it out there. And we start talking about, again, kind of where are our choices at? What can we influence? And you start to come up with ideas and alternatives that once the team kind of sees, \"okay, I see all the things I can't control. But there are things kind of in my model that I can control in this cause and model that I can influence.\" And they make different decisions. And then all of a sudden, it's less about complaining about the things they don't have."
+      "I've been with groups where it's like, you know, \"testing is flaky\" and all these kinds of things. And it's like, \"well, it's flaky because of upstream and downstream dependencies. And it's flaky because the other team messed it up. And it's flaky because of all these things.\" But it's like, we just kind of lay it out there. And we start talking about, again, kind of where are our choices at? What can we influence? And you start to come up with ideas and alternatives that once the team kind of sees, \"okay, I see all the things I can't control. But there are things kind of in my model that I can control in this causal model that I can influence.\" And they make different decisions. And then all of a sudden, it's less about complaining about the things they don't have."
     ],
     [
       75,
       "00:22:07",
       "Joel Tosi",
-      "And it's more about embracing and moving towards the things they do have. So I've seen cause and models have that kind of powerful impact on teams."
+      "And it's more about embracing and moving towards the things they do have. So I've seen causal models have that kind of powerful impact on teams."
     ],
     [
       75,
@@ -41715,13 +41715,13 @@
       75,
       "00:26:03",
       "Allan Stewart",
-      "Like, why are people feeling this? You want to start?"
+      "Like, why are people feeling this?"
     ],
     [
       75,
       "00:27:00",
       "Joel Tosi",
-      "Well, I kind of flick my thoughts in my head."
+      "You wanna start while I collect my thoughts in my head."
     ],
     [
       75,
@@ -41835,7 +41835,7 @@
       75,
       "00:37:20",
       "Joel Tosi",
-      "We had some great conversations where Elisabeth was like, \"this feels like a God class, right? We can't have this God object that's been out here.\" It's like, \"oh, I get that. Let's, okay, let's get, you know, we can get into it.\" But equally wonderful working with Elisabeth's, and you'll have more coming in the future. The one thing that, again, kind of piggybacking on what Elisabeth was saying is, in the book, we talk about context. And I think we did, that was probably one of my favorite chapters, is because a lot of times people would ask you, just like Elisabeth always says, you know, \"what should we do?\" \"It depends.\" \"What does it depend on?\" \"It depends on your context.\" And it's like, \"oh, okay.\" And we just accept that and move on."
+      "We had some great conversations where Elisabeth was like, \"this feels like a God class, right? We can't have this God object that's been out here.\" It's like, \"oh, I get that. Let's, okay, let's get, you know, we can get into it.\" But equally wonderful working with Elisabeth, and you'll have more coming in the future. The one thing that, again, kind of piggybacking on what Elisabeth was saying is, in the book, we talk about context. And I think we did, that was probably one of my favorite chapters, is because a lot of times people would ask you, just like Elisabeth always says, you know, \"what should we do?\" \"It depends.\" \"What does it depend on?\" \"It depends on your context.\" And it's like, \"oh, okay.\" And we just accept that and move on."
     ],
     [
       75,
