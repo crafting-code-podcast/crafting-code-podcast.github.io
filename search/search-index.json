@@ -346,7 +346,7 @@
       "n": 19,
       "title": "Sustaining Communities",
       "date": "2022-10-11",
-      "summary": "There are many benefits to having communities of practice, so long as the community continues to exist. In this episode, special guests Jon Turner and Neil Sorensen discuss what they've learned over their many years attending and facilitating the Utah Software Craftsmanship group (http://utahsc.org/).",
+      "summary": "There are many benefits to having communities of practice, so long as the community continues to exist. In this episode, special guests Jon Turner and Neil Sorensen discuss what they've learned over their many years attending and facilitating the Utah Software Craftsmanship group ( http://utahsc.org/ ).",
       "themes": [
         "Communities and events",
         "Deliberate practice and learning culture",
@@ -369,7 +369,7 @@
       "n": 20,
       "title": "The Humble Programmer",
       "date": "2022-12-14",
-      "summary": "The works of Edsger W. Dijkstra have made a huge impact on the software industry. In this episode, your hosts dive into his paper, The Humble Programmer, to discuss how well it holds up to today's programming world. We cover hardware, cleverness, abstraction, proofs, and more. Even when we disagree with his specifics, we find ourselves still nodding in general agreement.",
+      "summary": "The works of Edsger W. Dijkstra have made a huge impact on the software industry. In this episode, your hosts dive into his paper, The Humble Programmer ( https://dl.acm.org/doi/pdf/10.1145/355604.361591?download=true ), to discuss how well it holds up to today's programming world. We cover hardware, cleverness, abstraction, proofs, and more. Even when we disagree with his specifics, we find ourselves still nodding in general agreement.",
       "themes": [
         "Testing and TDD",
         "Readable code and naming",
@@ -411,7 +411,7 @@
       "n": 22,
       "title": "Fending Off Frameworks",
       "date": "2023-03-06",
-      "summary": "Software frameworks are so useful we can hardly imagine working without them. Yet they have an insidious tendency to invade, corrupt, and wrest control away from us. In this episode, your hosts discuss the good and bad of frameworks then offer some suggestions for keeping them at arm's length.",
+      "summary": "Software frameworks are so useful we can hardly imagine working without them. Yet they have an insidious tendency to invade, corrupt, and wrest control away from us. In this episode, your hosts discuss the good and bad of frameworks and offer some suggestions for keeping them at arm's length.",
       "themes": [
         "Frameworks and tool dependence",
         "Hexagonal architecture and adapters",
@@ -694,7 +694,8 @@
         "Context over dogma",
         "Deliberate practice and learning culture",
         "Company culture and incentives",
-        "Microservices and monoliths"
+        "Microservices and monoliths",
+        "Conway's law and team structure"
       ],
       "references": [
         "Work is Work. Coda Hale.",
@@ -1401,7 +1402,7 @@
       "date": "2026-10-02",
       "summary": "Biology has a lot to teach us about successful complex systems. As with other disciplines, we can adapt biological concepts to help us create better software — both in code and in how we work. In this episode, your hosts talk about how we can apply concepts from cells, genetics, and evolution to practical concepts like team creation, code communication patterns, and architecture. You may never code up your own genetic algorithm, but we think you'll find the concepts interesting and useful.",
       "themes": [
-        "Architecture and systems",
+        "Sociotechnical systems",
         "Fitness functions",
         "Event-driven architecture",
         "Conway's law and team structure",
@@ -1455,6 +1456,27 @@
       "references": [
         "OWASP Top 10. OWASP Foundation.",
         "Team Topologies. Matthew Skelton and Manuel Pais."
+      ]
+    },
+    {
+      "slug": "076-signals-and-levers",
+      "n": 76,
+      "title": "Signals & Levers",
+      "date": "2026-11-13",
+      "summary": "In this episode, Dave and Allan had the wonderful opportunity to chat with the authors of Signals and Levers: Elisabeth Hendrickson and Joel Tosi! Why is it that we get so caught up in the three illusions of predictability, progress, and control? What levers can the average developer reach? Why do we like causal diagrams so much? How does framing change as a hypothesis affect our mindset? It turns out that software engineers might have more capability for influence than we sometimes think.",
+      "themes": [
+        "Sociotechnical systems",
+        "Company culture and incentives",
+        "Delivery metrics and productivity",
+        "Estimation and commitments",
+        "Leadership and delegation",
+        "Testing and TDD",
+        "Flow and small batches"
+      ],
+      "references": [
+        "Signals & Levers. Elisabeth Hendrickson and Joel Tosi.",
+        "Thinking in Bets. Annie Duke.",
+        "Better Testing, Worse Quality?. Elisabeth Hendrickson."
       ]
     }
   ],
@@ -41376,6 +41398,462 @@
       "00:48:23",
       "Dave Adsit",
       "And this whole practice should be applied to the system in pursuit of a greater productivity, velocity, whatever phrase you want to use, a more consistent flow of value through our system, so that we are always delivering value to our customers in a timely manner. And so that's what I think about when I think about the whole shift left concept, is how do we improve this system so that we can deliver software centric value more consistently and reliably to our customers."
+    ],
+    [
+      75,
+      "00:00:18",
+      "Allan Stewart",
+      "Where we discuss the importance of doing the right thing at the right time with the right tools. I'm Allan Stewart, a software architect. And lately I've been thinking about what parts software development are improved by human collaboration and what areas can be relegated to automation and AI."
+    ],
+    [
+      75,
+      "00:00:35",
+      "Dave Adsit",
+      "I'm Dave Adsit, an engineering leader, and recently I've been thinking about what parts of my job can be enhanced by handing tasks to AI and what can be eliminated entirely. Our topic for this episode is the book Signals and Levers."
+    ],
+    [
+      75,
+      "00:00:50",
+      "Allan Stewart",
+      "And today we have very special guests, Elisabeth Hendrickson and Joel Tosi, the authors of the book. Dave and I have read and enjoyed this book. So when our friend Mike introduced us, we were so excited to have you on the podcast. So we'll let you introduce yourselves, Elisabeth first and then"
+    ],
+    [
+      75,
+      "00:01:09",
+      "Elisabeth Hendrickson",
+      "Joel. Hi, I'm Elisabeth Hendrickson, and I'm so grateful to you all for having us here. Thank you so much. I never know what else to say."
+    ],
+    [
+      75,
+      "00:01:17",
+      "Joel Tosi",
+      "She's far too modest. I'm Joel Tosi. I am equally excited. Thanks for having us. Looking forward to the conversation. Awesome."
+    ],
+    [
+      75,
+      "00:01:26",
+      "Dave Adsit",
+      "Well, let's just jump right into it. One of the things that, as Allan and I were reading the book and discussing it with our book club, one of the things that came up is this concept of three illusions: predictability, progress, and control. And being in engineering leadership, these are the things that we talk about all the time. So let's talk about illusions."
+    ],
+    [
+      75,
+      "00:01:49",
+      "Elisabeth Hendrickson",
+      "And also, I'm sure that you have encountered situations where you all have managed to fool yourselves into believing that you had some number of those things, right?"
+    ],
+    [
+      75,
+      "00:01:58",
+      "Allan Stewart",
+      "Absolutely. I know I have control freak tendencies. So the illusion of control is very real to me."
+    ],
+    [
+      75,
+      "00:02:06",
+      "Dave Adsit",
+      "Yeah. Well, and I would say I've been in Scrum training since I don't even know how long. And all we ever talk about in Scrum is predictability, right? Like, that's the whole reason. But I've also heard that it's hard to predict, especially about the future."
+    ],
+    [
+      75,
+      "00:02:25",
+      "Elisabeth Hendrickson",
+      "Yeah. I mean, I will say I learned, I did learn both Scrum and Extreme Programming, but Extreme Programming, where we're working in tiny, tiny batches and each story is a placeholder for a conversation. And then we're going to proceed in a test-driven way so that everything we do, we do super well and it's production ready from the jump. That's the best way I know to get to something that looks like predictability. But even then, we didn't get predictability. And anybody who believed that we have rubbed the Agile magic on things and therefore we will have predictability was usually in for a really bad time. Predictability is wild."
+    ],
+    [
+      75,
+      "00:03:03",
+      "Dave Adsit",
+      "Yeah. Allan and I have often talked about lean software development and lean concepts in general. And so when we're talking about how to get something, some semblance or facsimile of predictability, it's all about how do we reduce WIP and how do we get single piece flow and how do we reduce batch size and lead time so that we can steer the ship as we discover what it is we really wanted instead of what we thought we wanted when we predicted at the beginning."
+    ],
+    [
+      75,
+      "00:03:34",
+      "Joel Tosi",
+      "Yeah. I mean, for me, that's just a great strategy and how to deal with it, because we live in an unpredictable, complex world, those kinds of things. I think when we first started getting into predictability stuff, we were actually looking at variability and the assured side of things. And what was interesting was a lot of organizations, especially, like, at scale, were always trying to figure out, \"how do we become more predictable? How do we become more predictable?\" And they would do all these things, right? Like have certain ways you have to estimate software. They have certain ways where you'd have to, like, \"well, you have to separate the tickets this way.\" And it was just all of this ways of just trying to make things predictable."
+    ],
+    [
+      75,
+      "00:03:34",
+      "Joel Tosi",
+      "And as soon as you take a step back and you look at, like, their actual data on their feature or epic delivery or any kind of thing that would go to the customers, but the customer would say, like, \"that's something I want,\" you would see it's just kind of all over the place. But they were so focused on controlling the variability and getting rid of the variability that they didn't, and they wanted to be everything predictable. They didn't even look at the variability. And when we were talking early on about it, the crazy thing is, like, even if you do the XP to the T, right, and we do a small batch and do everything, there's still all of this stuff that you can't control that creates variability. We thought the customer wanted this."
+    ],
+    [
+      75,
+      "00:03:34",
+      "Joel Tosi",
+      "Then once they started seeing it, they changed their mind a little bit. And now the shape of the work's a little different. Or, I mean, let's just be honest. Technology is changing every single day. So it's like that you were going to deploy it on-prem and now it's going to be on cloud. And now it's going to be in a container. And now it's going to be in Kubernetes. And so, like, all of these other things are just introducing all this variability to your work. So, like, the illusion of predictability, the best thing you can do is acknowledge it and then just see how you create strategies around it."
+    ],
+    [
+      75,
+      "00:05:23",
+      "Allan Stewart",
+      "And when we try to stop the variability from happening, we just start thrashing, because you're moving the goalposts while you're trying to play the game. Yeah."
+    ],
+    [
+      75,
+      "00:05:34",
+      "Elisabeth Hendrickson",
+      "100%. I once watched a product manager. We used Pivotal Tracker. Pivotal Tracker had this ability where you could tweak the strength of the team. And then it did math for you based on estimates, based on the points that you allocated to stories, to determine which week a story was likely to hit in. And it would actually draw a little line. And then you could see, you know, if this milestone is going to be later than the date on the milestone based on the math, then it would be in red or whatever. And I watched a product manager once spend, I don't even know how long, and I don't know how many hours over the course of weeks he did this. But he would tweak that team strength and justify to himself, like, \"oh, well, let's see."
+    ],
+    [
+      75,
+      "00:05:34",
+      "Elisabeth Hendrickson",
+      "So-and-so said they had a dentist appointment on Thursday and so-and-so is going to be out on vacation.\" And I mean, like, justifying down to, like, the smallest little tweaks to tweak the team strength in an effort to get a completely flat velocity. So that velocity was 100% predictable with zero variability, because that was going to give him perfect predictability. Spoiler, it didn't work, but it wasted an enormous amount of his time. And so that was one of the stories that was in my head as we were writing about illusions. And the attempt to massage your perception of reality in order to convince yourself of an illusion just leads to such bad outcomes for everyone. Because then if it doesn't go according to plan, then there's, like, a lot of pressure. \"Hey, but my model says this should be true."
+    ],
+    [
+      75,
+      "00:05:34",
+      "Elisabeth Hendrickson",
+      "So you should go make it true.\""
+    ],
+    [
+      75,
+      "00:07:27",
+      "Dave Adsit",
+      "Uh-huh. And so if I tweak the numbers enough, if I exert enough control over every single thing in the system, then we can have predictability according to our random guesses."
+    ],
+    [
+      75,
+      "00:07:43",
+      "Joel Tosi",
+      "Sure. This is where Elisabeth had, I love when you said, you know, you can do math on guesses and opinions and there's still guesses, like, you can do all the math you want. It's just guesses and opinions."
+    ],
+    [
+      75,
+      "00:07:55",
+      "Allan Stewart",
+      "Yes. So if we move on to a different illusion, I'm kind of curious, what are your thoughts about progress being equated to outputs in companies? Because I feel like I've often seen this where, well, if we just output more stuff, or if we could possibly even overproduce, we can finally see the progress because all these deploys happened, all these features were delivered. Why do you think that it is that companies so easily fall into this trap? Is it just because it's so much easier to measure?"
+    ],
+    [
+      75,
+      "00:08:31",
+      "Elisabeth Hendrickson",
+      "So this is why we say that the three illusions travel together, because there's also a control element to that, right? Like, I can't actually control every aspect of delivery of value where value is being determined by people who give us money. They have opinions, and I can't control their opinions. But I can, to some degree, control how much we output. And then it's somebody else's problem if the output was not equated with value. And it's kind of like I remember a project where once a ticket was checked, once the code for a ticket was checked into the source control system, then there was this entire, like, set of things that had to happen that were far outside of our control before it went to production."
+    ],
+    [
+      75,
+      "00:08:31",
+      "Elisabeth Hendrickson",
+      "But there were still, like, points where a developer could be very, very much on the hook to come back and do some work along that path to production. And I'm intentionally alighting away all of the details of this, but I'm sure that you have lived in this world, because this is a very common situation. And so the developers, I was responsible for this part of the organization, and the developers are coming to me saying, \"okay, but we checked in the ticket. We don't want to think about this anymore.\" Well, that's nice, but you're still on the hook until it actually makes it the rest of the way through the gauntlet. You don't get to just ignore it. And that was very much the output rather than outcome perspective."
+    ],
+    [
+      75,
+      "00:08:31",
+      "Elisabeth Hendrickson",
+      "\"I have control up until I check in the code into the source repository, and I want my credit. I want my brownie points at that point. I want to be able to declare victory and be done.\" And to be fair to them, the rest of the organization wasn't exactly set up to make their lives easy on the rest of the path of that journey. But that's why these are systemic issues and why it's important that leaders take that systems thinking view in order to do their part to design the system to basically not screw over everybody who has to work in the system."
+    ],
+    [
+      75,
+      "00:10:39",
+      "Joel Tosi",
+      "Just kind of adding what Elisabeth said, I think Elisabeth and I had an after dark topic called \"time delay is a problem.\" And so I think why there's the illusion of progress, a lot of it comes down to latency. We want to make big, grandiose decisions. And so what happens is we want to have customer impact. But there's latency between the customer impact being something actually measurable, like an outcome or an impact. And so we just start measuring outputs because of latency. We want to know we're going the right direction. Latency causes us to take shortcuts. Latency, and I would offer up noise, right? Because sometimes what happens is we're making changes and we're not getting the data that we think we would get, but we're getting different data. And so now it's like, is the new data more important or is it noise?"
+    ],
+    [
+      75,
+      "00:10:39",
+      "Joel Tosi",
+      "And so you have this idea of noise and latency, which I think just compounds the solution of progress. I would offer up, it happens all the time in product, but it happens in, like, think about when you went to the cloud. \"We're going to go to the cloud because it's going to be cost savings.\" And then we start to forget about the cost savings. And then it's like, well, we went to the cloud to get to the cloud. How many people are in the cloud? Or you're going to do the Agile transformation. And at first it was about Agile transformation for faster feedback and so you can adapt. But because of noise and latency, it becomes how many teams are having standups? And so you get this illusion of progress because noise and latency comes into play."
+    ],
+    [
+      75,
+      "00:10:39",
+      "Joel Tosi",
+      "You lose track of what you wanted to do."
+    ],
+    [
+      75,
+      "00:12:11",
+      "Dave Adsit",
+      "Yeah. One of the things that we like to talk about is that model of inputs, outputs, outcomes, and impact. Yeah. And all of those are areas that you can measure. And some of them are closer to my work and some of them are farther from my work. If I'm a developer on a team, I see the tickets coming in. I see the code commits going out. Those are my inputs and my outputs. All of our company goals are written in terms of revenue change. I can't connect my work to revenue change. So I'm going to pretend it doesn't exist. Right? So that's too distant. I think this is exactly the same story you were just telling, Elisabeth. I've seen it at almost every company. Engineers come to me and they say, \"I want to have an impact.\" I'm like, \"okay, great."
+    ],
+    [
+      75,
+      "00:12:11",
+      "Dave Adsit",
+      "Let's figure out how to have an impact. Let's look at the company objectives. Let's look at our key results.\" And I think, honestly, the concept of objectives and key results as a goal setting strategy is phenomenal when executed correctly. Unfortunately, it's almost never executed correctly. It always turns into \"let's measure outputs\" as opposed to \"let's measure outcomes or impact.\" Yep."
+    ],
+    [
+      75,
+      "00:13:19",
+      "Elisabeth Hendrickson",
+      "100%. And because measuring, although I hear what you're saying, it is sometimes very difficult to measure those things. Yeah. In part because of the time delay. Like, drawing that through line from \"I picked up this ticket in Jira\" to \"we made one more dollar as a result of my having done this work.\" That through line doesn't exist. And it would be incredibly difficult. I've also talked to people who say, \"well, but why not? Why can't we just?\" And well, the reason that customer turned over there might not be tied to anything that was shipped in the last month. It may be because there was this resentment that was building up over something that was happening that had been happening for six months. And they finally said, \"screw it."
+    ],
+    [
+      75,
+      "00:13:19",
+      "Elisabeth Hendrickson",
+      "I see that my renewal is about to come up and I'm just not going to renew.\" And the moment that they made that decision, you now have a time associated with that. But you can't associate causality with that unless you've got some phenomenal feedback cycles built in, which combine customer relationship stuff with being able to have great instrumentation in production so that you can tell even when things aren't, like, you know, 503 gateway timeouting or dying, that you were having at least some little blip of customers were having trouble logging in, kind of thing, or something. Right. Like, the level of instrumentation that you would need to have to have that through line is enormous and much bigger than most organizations I've ever seen actually instrument. And so the best you can do is correlation."
+    ],
+    [
+      75,
+      "00:13:19",
+      "Elisabeth Hendrickson",
+      "And even then you got to ask all the questions to figure out, wait, how do we know what we think we know?"
+    ],
+    [
+      75,
+      "00:15:04",
+      "Dave Adsit",
+      "Right. Well, and one of the things that often happens is you are not competing in isolation inside of your company. You are not the only option in the market. And maybe you did everything right. And you still lost because somebody else did everything right, better and faster and more, or better and faster and substantially less, and therefore less complicated and less expensive."
+    ],
+    [
+      75,
+      "00:15:27",
+      "Elisabeth Hendrickson",
+      "Right. I didn't want to end there and say, so, you know, YOLO, whatever, it doesn't matter what you do. I think it is still important to be asking these questions and figuring out, all right, what is our thesis for how we, you know, what is our thesis for how we think about ticket prioritization? And tie it back to \"here's what we're actually trying to accomplish and here is our hypothesis for the connection.\" And then looking at that in the larger feedback loops and learning. I think that that's the answer. It's not trying to actually make connections that you cannot make. It's all about learning."
+    ],
+    [
+      75,
+      "00:16:04",
+      "Dave Adsit",
+      "Yeah. And so a lot of that comes down to effective leadership and understanding of the system from people who are working at the system level as opposed to in the system. So in the book club that Allan and I are in, one of the questions that came up recently was, the two types of levers are policy and culture. How does an average developer affect these, and what levers can I pull and reach for if I'm a developer on a team?"
+    ],
+    [
+      75,
+      "00:16:37",
+      "Elisabeth Hendrickson",
+      "So just to unpack for anybody who hasn't read this part of the book, the policy levers are anything that does require positional authority of some kind. So it's not just about writing a policy in the policy manual. It's literally anything that involves authority, like hiring decisions or team organization decisions or promotions or job descriptions or budget or any of these things. It's all policy. Culture, however, the culture is the water that we all swim in. It's the unwritten assumptions that we get to make that we all work for this company, therefore we value. And it's not what's in the value statements on the website. It's what people actually behave like in the company and the assumptions that they can make about each other because of shared culture. Culture is a living, breathing thing. Culture will eat policy for breakfast."
+    ],
+    [
+      75,
+      "00:16:37",
+      "Elisabeth Hendrickson",
+      "So if they are at odds, the culture is going to win. And culture is the thing that literally everyone in the company, from the lowest paid intern all the way through executive management, can influence just by show and do, just by showing up every single day. So the question then is, well, what culture do you actually want to live in? And how can you shape the culture to be what you want it to be? How can you influence those around you? And that is 100% accessible to everybody. And it boils down to \"feed what you want to grow.\" You see the smallest, tiniest spark of something that is what you want more of, and you feed it. How do you feed it? You might feed it with explicit appreciations. \"Thank you so much for having done the thing."
+    ],
+    [
+      75,
+      "00:16:37",
+      "Elisabeth Hendrickson",
+      "I really appreciated how you facilitated that retro,\" or \"I really appreciated that you did the thing, that you took the extra step before you checked in that ticket to make sure of whatever.\" If you have positional authority, you might have more ways to feed things, because you may be able to do bonuses or you may be able to give people promotions or recognize them in a, you know, all hands kind of thing. But just because those people have more, basically they speak with a megaphone standing on a soapbox, right? Like, they have a bigger megaphone, but that doesn't mean that some of the biggest appreciations that I've ever got came from peers, frankly. I mean, like, I remember when somebody once left a bunch of a bag of jelly beans on my chair as a thank you."
+    ],
+    [
+      75,
+      "00:16:37",
+      "Elisabeth Hendrickson",
+      "I definitely did more of the things that got me the jelly beans. So that would be my answer, is even if you have zero positional authority. Now, somebody who's, like, at a senior level of development actually has some positional authority they may not realize that they have. Because they get to make decisions about what's considered acceptable and not acceptable in a code base and enforce those decisions. And so they also have some policy levers at their disposal. But the culture levers, literally everybody can pull on those."
+    ],
+    [
+      75,
+      "00:19:38",
+      "Joel Tosi",
+      "I've had some teams. One of the stories might even be, like, in the book, like Liz was saying, like, feeding what you want to grow. I've been with groups where they'll have the stand-up and the default is, you know, \"if anybody has any questions, let me know and I can help you,\" kind of thing. That's drastically different than kind of shifting that and saying, \"hey, I want somebody to work with me today.\" Or \"can I work with you on that, because I want to learn that.\" It's like, sometimes, like, those little things, like in your stand-ups, you can just make those subtle changes, those little shifts, and they start to change the culture that you want to have in your space."
+    ],
+    [
+      75,
+      "00:19:38",
+      "Joel Tosi",
+      "The other thing that I think has been really interesting with some of our clients, we've been using this language, the signals and levers, for a while now, before the book even came out. And so we'll be in a meeting and we'll be talking across teams and there's testing challenges, right? Because bad architecture, accidental coupling, all of the things happening. And so you get to a point where you're in these meetings over and over and you start using this language like, \"I feel like this meeting is a signal of something else.\" And all of a sudden, people start saying, \"that's interesting. What do you think it might mean?\" And then the language starts picking up. And then other engineers on the team are saying in different times, \"this code's kind of confusing."
+    ],
+    [
+      75,
+      "00:19:38",
+      "Joel Tosi",
+      "I feel like it's a signal of something else.\" And now you see the language starting to take hold. There's all these little things, even at the simplest level, that we can do to just shift the culture to what we want it to be. We just have to do it."
+    ],
+    [
+      75,
+      "00:21:06",
+      "Elisabeth Hendrickson",
+      "That's a four-letter word around here. Yeah, \"just\" as a signal all by itself. It's a signal. Jerry Weinberg used to say that you can always translate \"just\" as \"we'll have great trouble doing.\" Just do word substitution."
+    ],
+    [
+      75,
+      "00:21:22",
+      "Allan Stewart",
+      "So switching to another topic for a minute, one of the big things for me coming out of this book was the causal diagram and where we go with those, what you can learn, kind of experimenting and getting it out of your head, and these assumptions actually into the world a little bit, and say, \"okay, now on my paper or on my online whiteboard or whatever, here I have a visible representation.\" And so I'm curious, what are some of the insights that you yourselves have gained from doing these kinds of diagrams, or maybe ones that you've seen from other people that have been participating in this practice with you?"
+    ],
+    [
+      75,
+      "00:22:07",
+      "Joel Tosi",
+      "I think this came up possibly during the writing of the book. Usually when we'd be talking about reinforcing loops, we'd always talk about them early on as, like, \"well, these are vicious loops. We're in doom loops. We're in these kinds of things.\" Or, you know, \"we're always in these virtuous loops. These are really good.\" And we almost, I don't want to say bias the model, the labeling, but sometimes we would just kind of say, like, you know, you're in this bad situation and it felt bad. And then we took a step back and just realize and discuss, like, the reinforcing loop doesn't care. It's just a reinforcing loop. Depending upon the side of it you're on, it's either vicious or virtuous. And again, sometimes those subtle nudges kind of make that big difference."
+    ],
+    [
+      75,
+      "00:22:07",
+      "Joel Tosi",
+      "I've been with groups where it's like, you know, \"testing is flaky\" and all these kinds of things. And it's like, \"well, it's flaky because of upstream and downstream dependencies. And it's flaky because the other team messed it up. And it's flaky because of all these things.\" But it's like, we just kind of lay it out there. And we start talking about, again, kind of where are our choices at? What can we influence? And you start to come up with ideas and alternatives that once the team kind of sees, \"okay, I see all the things I can't control. But there are things kind of in my model that I can control in this cause and model that I can influence.\" And they make different decisions. And then all of a sudden, it's less about complaining about the things they don't have."
+    ],
+    [
+      75,
+      "00:22:07",
+      "Joel Tosi",
+      "And it's more about embracing and moving towards the things they do have. So I've seen cause and models have that kind of powerful impact on teams."
+    ],
+    [
+      75,
+      "00:23:35",
+      "Elisabeth Hendrickson",
+      "Well, I've personally experienced having a realization about an influence within an organization that I previously had not been aware of and that was driving some behavior. I wrote a paper back in 2001 called \"Better Testing, Worse Quality,\" and that had come out of a combination of my observations of a variety of organizations, but also the one organization that I had been in while I was writing drafts of that paper. I had a super awkward experience of being hauled essentially into my boss's office to explain myself and explain how it was that they had invested massive amounts in bringing me in to run the quality organization and investing heavily in building up a best in class QA group. And yet the quality of what we were shipping was worse. How was that possible?"
+    ],
+    [
+      75,
+      "00:23:35",
+      "Elisabeth Hendrickson",
+      "And I ended up, before I was drafting a paper about it, I had ended up using causal models, which I had been learning at the time through the work of Jerry Weinberg, and also had been reading a bunch of Peter Senge and stuff. And I decided to try to apply it. And it was through just trying to externalize from my head what I was seeing in this environment that I realized, oh, and it's kind of obvious in hindsight, but it was not obvious at all at the time. And for that matter, the paper was kind of heretical at the time. But that there was this connection that the more an external group was seen as the people who test, the less testing was happening inside development. Therefore, the more target rich the environment was."
+    ],
+    [
+      75,
+      "00:23:35",
+      "Elisabeth Hendrickson",
+      "So of course, we found more bugs and we thought we were great. But there also were that many more that weren't getting caught and that we were shipping. And so quality was degrading. And I would not have put two and two, I wouldn't have realized, I would not have seen the underlying forces if I hadn't externalized it in the form of a causal model. Since then, I have experienced over and over again, drawing out the causal model with a group of people so that we can all share our perspectives on a system enables people to see influences within the system that they previously had not realized, and have that aha, oh, snacks moment as they see something on paper, that they were digital, whatever, that they previously had discounted as not being a, you know, they just hadn't thought about it being an actual thing."
+    ],
+    [
+      75,
+      "00:23:35",
+      "Elisabeth Hendrickson",
+      "Driving force within the organization. So yeah, that's my story."
+    ],
+    [
+      75,
+      "00:26:03",
+      "Allan Stewart",
+      "That's great. I think for me, putting it out into the diagram forced me to really challenge my own assumptions and write it down. Similar to when I'm preparing a presentation or writing down anything, really. You get these mental loops in your head where you're taking mental shortcuts that aren't always actually accurate. So putting it out there, I start to see the whole system and I start to see how, \"oh, actually I am contributing to this system in these ways.\" Or \"here's something that I was blaming someone else for, but well, actually they are part of the system too.\" And so as I've done some of them with some of my current problems, I've actually in the email to Joel, it was kind of therapeutic for me. And you said that there are other people who are feeling the same way. Any thoughts about that?"
+    ],
+    [
+      75,
+      "00:26:03",
+      "Allan Stewart",
+      "Like, why are people feeling this? You want to start?"
+    ],
+    [
+      75,
+      "00:27:00",
+      "Joel Tosi",
+      "Well, I kind of flick my thoughts in my head."
+    ],
+    [
+      75,
+      "00:27:10",
+      "Elisabeth Hendrickson",
+      "That, I don't know, kind of recognition that being able to share information and then see, oh, this is why it feels so good. And I'm remembering a time that is not related to causal diagrams, but I was teaching a class on testing techniques, and there's this one person in the back of the class who was very quiet, heads down. I, I was convinced that she was multitasking, and so I was just like, \"okay, I'm not going to worry about you right now, but I'm going to focus over here.\" And all of a sudden, out of nowhere, in the back of the room she says, \"oh,\" really loud, like, like, just \"oh,\" and her whole face was just lit up and she was clearly joyous about something. And I, I had no idea what had just happened for her."
+    ],
+    [
+      75,
+      "00:27:10",
+      "Elisabeth Hendrickson",
+      "And then she explained that I had just walked through the impossibility of complete testing because of combinatorial explosion of stuff, and she said, we had a bug and I got blamed for it, and I just realized as a result of everything that you just explained. I just ran the math. And this was a one out of 30 million something something bug. And there's literally no way for me to have possibly tested every combination. It only occurs in one of the combinations. So that feeling, you know, I may not have had a story that I can remember in recent memory with somebody having that level of explosive joy at discovering why things are the way they are. But I think that that might answer your question, at least from my perspective, that the shared acknowledgement of reality is somehow tremendously uplifting."
+    ],
+    [
+      75,
+      "00:27:10",
+      "Elisabeth Hendrickson",
+      "This is why things are the way they are, and there's stuff we can do about it."
+    ],
+    [
+      75,
+      "00:28:53",
+      "Joel Tosi",
+      "I love that. I would probably give you two answers, Allan, now that I had time to think about it since Elisabeth bought me some time. The therapeutic aspect of it, I think a lot of people, we sense the signals. We kind of sense the system. We can feel, like, this doesn't feel right, or we feel like we're arguing more than, like, we feel all these things. And then just taking the time to kind of externalize it, and then it becomes us talking and pointing at something as opposed to, like, us arguing at each other, that, that feels therapeutic."
+    ],
+    [
+      75,
+      "00:28:53",
+      "Joel Tosi",
+      "Like, that's, that's felt great for a lot of teams that, that I've done it with, where it's like, let's just sit down and talk about what's happening, kind of like, and we can do the qualitative and quantitative, you feel pressure and what happens when you feel, like, we can do all those kinds of things. And they, they feel like now they can share it, and kind of like when they're talking to managers or talking to product or talking to somebody else, they feel like it's not, they feel validated, I guess I would say. The flip side of that, what I would also suggest is a lot of middle management is doing the best they can. And so sometimes by putting a causal model out there, it's kind of like, look, they're experiencing different signals than you're seeing."
+    ],
+    [
+      75,
+      "00:28:53",
+      "Joel Tosi",
+      "And so if you can understand kind of, like, the world as they see it and the things that are influencing them, maybe we can kind of give them, you know, it's okay, kind of thing. Like, they're doing the best they can with it, but they're seeing and experiencing different signals. So we need to see reality together to make, you know, so we all feel heard. That's why it feels therapeutic to me, man. I like that."
+    ],
+    [
+      75,
+      "00:30:20",
+      "Dave Adsit",
+      "Awesome. Well, I just wanted to say one thing that came out of this section that I thought was really powerful is the language that you use. I've done some systems thinking reading before, and using the terms reinforcing and balancing loops as opposed to positive feedback and negative feedback, which often gets conflated from \"it's a positive feedback loop, but I don't like the outcome.\" Right. But the more you do of it, the more you get of it, that the language is harder in standard systems thinking books than it is in this. And I found that very valuable for helping facilitate discussions. But I wanted to change gears a little bit and talk a little bit about change as a hypothesis. The idea of Thinking in Bets makes a ton of sense to me."
+    ],
+    [
+      75,
+      "00:30:20",
+      "Dave Adsit",
+      "I actually built a whole startup around it, and it turns out we decided to cut the bet short because we were not making any headway towards building the product, or rather we were building the product and not selling the product, which is common for many startups. So I love this idea of change as a hypothesis. Could you tell us a little bit more about that?"
+    ],
+    [
+      75,
+      "00:31:22",
+      "Elisabeth Hendrickson",
+      "Sure. I want to make sure that I do a shout out, because Thinking in Bets is the title of a book by Annie Duke. And it's a fantastic book, highly recommend it and everything that's in it. And obviously we are just focusing on one tiny, tiny little sliver, which is the idea that every time you are making any kind of investment and, and so change as an investment, maybe you're investing in more automated tests or more DevOps automation or more instrumentation or whatever, or you're making a bet on a product feature, you're making an investment. That investment is a bet. You, you must have a thesis. You talked about output, outcome, impact."
+    ],
+    [
+      75,
+      "00:31:22",
+      "Elisabeth Hendrickson",
+      "You have to have a thesis for the kind of impact that you're going to have, because otherwise you're running open loop and you have no way of steering towards value if you have no way of connecting the investment to the impact you're expecting that investment to have. And what it might be unlocking is something entirely internal to your company. Like, \"we're going to invest in a platform team. And our hypothesis is that the developer experience is going to get better.\" We have to have a way of being able to tell, is the developer experience getting better or worse?"
+    ],
+    [
+      75,
+      "00:32:40",
+      "Joel Tosi",
+      "I love framing it as hypotheses for all reasons Elisabeth said, as well as a couple others. One is, as soon as we frame it as hypothesis, we open up ourselves to the fact that we are going to learn. Like, if you're doing an experiment and it fails, you've learned something because of the failure. If everything always succeeds, you don't grow, because everything works as you expect it to, and there's no learning happening. So framing it as a hypothesis opens us up to the fact that we're going to learn something by doing this. The other thing that I love about framing it as a hypothesis is then we can also talk about what are the areas that the countermeasures or the counter things we want to look at. What do we want to make sure doesn't change?"
+    ],
+    [
+      75,
+      "00:32:40",
+      "Joel Tosi",
+      "I think a lot of organizations, what happens is they have an idea of something they want to do. \"We're going to release this product feature.\" Product feature goes out there. Everybody loves it. Lots of uptake. Operations costs went through the roof. \"Oh, we, we didn't want the operations costs to go through the roof, though,\" you know, or, you know, something like that, or, you know, and now we're paying more for infrastructure, or we, we did this thing in the cloud and this, this, this thing happened. My frame of his hypothesis, we can talk about the, you know, the experiment we're running, as well as the things we want to make sure remain under control. We understand it better."
+    ],
+    [
+      75,
+      "00:33:53",
+      "Allan Stewart",
+      "And I also feel like when you have that mindset of \"this is a hypothesis, let's see what happens,\" you're more likely to actually look and connect what occurs back to the change that you had. One of the things that the book talks about, or that you talk about in the book, is that, and especially when time passes, it gets more and more difficult to connect what happened with what caused it. And so having it as a hypothesis in the first place and say, \"hey, we're experimenting this, we're going to try this and see what happens.\" I feel like it puts you in a state where you're more liable to actually go and measure things."
+    ],
+    [
+      75,
+      "00:34:35",
+      "Dave Adsit",
+      "One of the things I like about that is that you move that whole theory earlier in the process, as opposed to just sifting through the data at the end and saying, \"oh, this happened because this, because we saw this, and then later we saw this,\" because the human mind likes to say after, therefore because of. And that's not always the case. And so setting down at the beginning and saying, \"this is what we think is going to happen if we take this action.\" Let's take the action and then measure the outcomes. And if we didn't get what we want, then let's stop taking that action and do a different action instead."
+    ],
+    [
+      75,
+      "00:35:09",
+      "Elisabeth Hendrickson",
+      "Yeah, yeah, 100. It's so hard to tell despite and because apart, like, did we have this outcome despite thing or because of thing? And so yes, by, by framing things as a hypothesis and then seeing what happens, and then we're gonna, we're not getting what we want, we're gonna change, do we still keep getting the thing we didn't want? That's an indication that the thing that we changed actually is not related in any way."
+    ],
+    [
+      75,
+      "00:35:38",
+      "Allan Stewart",
+      "We're coming up to the end of our time here, unfortunately. I love talking about systems thinking and could probably do it all day, because there are not enough people inside of companies that are talking about systems thinking, despite the systems that they're operating in. But before we leave, I just wanted to give each of you an opportunity. Is there some highlight for you that you would want to share? It was particularly meaningful for you working in this book or, or even something that you want to plug?"
+    ],
+    [
+      75,
+      "00:36:11",
+      "Elisabeth Hendrickson",
+      "Well, I mean, I'll plug in terms of not enough people talking about systems thinking. So we had weird timing that we did not premeditate. This was not planned, but it turned out that I, the world is now talking about systems thinking as a super critical skill, because frankly, everything is changing constantly. And I fundamentally believe that the only way that you can reason about the wildly changing world is through systems thinking tools, because this is how you reason about a non-deterministic system that is definitely not linear cause and effect. And so we love to help organizations figure out how to apply these tools internally to navigate the incredibly changing landscape that we all are participating in. But I also want to say my highlight for the book was just this opportunity."
+    ],
+    [
+      75,
+      "00:36:11",
+      "Elisabeth Hendrickson",
+      "Joel and I will be writing more books together, because the partnership works really, really well. I am so grateful to you, Joel, for putting up with my squirrels and also my \"hey, I know the deadline's in a week, but I have an idea for how to reorganize all of chapters three through nine. Trust me.\""
+    ],
+    [
+      75,
+      "00:37:20",
+      "Joel Tosi",
+      "We had some great conversations where Elisabeth was like, \"this feels like a God class, right? We can't have this God object that's been out here.\" It's like, \"oh, I get that. Let's, okay, let's get, you know, we can get into it.\" But equally wonderful working with Elisabeth's, and you'll have more coming in the future. The one thing that, again, kind of piggybacking on what Elisabeth was saying is, in the book, we talk about context. And I think we did, that was probably one of my favorite chapters, is because a lot of times people would ask you, just like Elisabeth always says, you know, \"what should we do?\" \"It depends.\" \"What does it depend on?\" \"It depends on your context.\" And it's like, \"oh, okay.\" And we just accept that and move on."
+    ],
+    [
+      75,
+      "00:37:20",
+      "Joel Tosi",
+      "But it's like, no, we can actually, we can talk about what context means, right? And I think we did a really nice job with that. But also, I think what was really interesting was starting to see how the causal modeling helped you understand what's causing your current context, and then doing the U-curves to show what choices you have based upon your context and based upon it. Like, the way all of these tools came together, to me, was really beautiful. And I hope it helps some people."
+    ],
+    [
+      75,
+      "00:38:23",
+      "Elisabeth Hendrickson",
+      "It was a delightful surprise to us, by the way, to discover as we started writing the book, the way the tools all came together. That was not originally something that we thought, we were going to write separate chapters on these separate tools, and that it would just be, you know, a toolbox. And what we discovered as we got deeper in was that they all mutually support each other, and the picture becomes much more complete when you apply all of them. Yeah."
+    ],
+    [
+      75,
+      "00:38:48",
+      "Allan Stewart",
+      "Well, thank you so much for joining us and for writing this book, because I have found it immensely helpful. It's definitely one that I will be recommending to people. Thank you so much. So if any of our listeners out there have not heard about Signals and Levers, go pick up a copy. It is excellent."
     ]
   ]
 }
