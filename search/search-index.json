@@ -215,7 +215,7 @@
         "Effective teams",
         "Ego, humility and ownership",
         "Frameworks and tool dependence",
-        "Teams and collaboration",
+        "Feedback and radical candor",
         "Retrospectives and blameless learning",
         "Feature flags and safe releases",
         "Flow and small batches",
@@ -310,7 +310,7 @@
       "date": "2022-05-23",
       "summary": "Programming languages are the tools we use to craft code. They have philosophies, environments, ecosystems, and idioms to consider. Picking which languages to use is an important choice for individuals and businesses. Although we all have likes and dislikes, perhaps sometimes we have to leave behind our code baggage to learn something new. But remember most of all: programming is fun!",
       "themes": [
-        "Code design and quality",
+        "Programming languages",
         "Frameworks and tool dependence",
         "Deliberate practice and learning culture"
       ],
@@ -379,7 +379,7 @@
         "Refactoring, legacy and rewrites",
         "Flow and small batches",
         "Conway's law and team structure",
-        "Code design and quality",
+        "Programming languages",
         "Domain-driven design",
         "Team communication and shared language",
         "Technical health, technical debt and code rot"
@@ -1095,7 +1095,7 @@
       "date": "2026-01-30",
       "summary": "Humans need feedback in order to do their jobs well. Unfortunately, because feedback can often feel negative, it can be difficult to both give and receive feedback. In this episode, Dave and Allan discuss the importance of feedback and share some concepts which have helped us improve. Hopefully some of the ideas will help you to either give better feedback or open yourself to receiving it.",
       "themes": [
-        "Teams and collaboration"
+        "Feedback and radical candor"
       ],
       "references": [
         "Crucial Conversations. Kerry Patterson, Joseph Grenny, Ron McMillan, and Al Switzler.",
@@ -1130,7 +1130,7 @@
         "Testing and TDD",
         "Software architecture",
         "CI/CD and trunk-based development",
-        "Engineering practices"
+        "Observability and monitoring"
       ],
       "references": [
         "The DevOps Handbook. Gene Kim, Patrick Debois, John Willis, and Jez Humble."
@@ -1402,7 +1402,7 @@
       "date": "2026-10-02",
       "summary": "Biology has a lot to teach us about successful complex systems. As with other disciplines, we can adapt biological concepts to help us create better software — both in code and in how we work. In this episode, your hosts talk about how we can apply concepts from cells, genetics, and evolution to practical concepts like team creation, code communication patterns, and architecture. You may never code up your own genetic algorithm, but we think you'll find the concepts interesting and useful.",
       "themes": [
-        "Sociotechnical systems",
+        "Biological analogs",
         "Fitness functions",
         "Event-driven architecture",
         "Conway's law and team structure",
@@ -1427,7 +1427,7 @@
       "date": "2026-10-16",
       "summary": "Do you know how your system behaves in production? Can you tell what is normal and what is a problem? It can be all too easy to do a basic set up with a SaaS product and then stop thinking about what's happening in production, hoping that you'll be able to get to the data if there's a problem. In this episode, your hosts discuss the concept of Observability. If we want to be able to improve our systems, avoid problems, and get the right alerts then we must instrument our code for the right data and learn what our baseline actually looks like.",
       "themes": [
-        "Engineering practices",
+        "Observability and monitoring",
         "Testing and TDD",
         "Costs, constraints and trade-offs",
         "Data and datastores"
@@ -1465,7 +1465,7 @@
       "date": "2026-11-13",
       "summary": "In this episode, Dave and Allan had the wonderful opportunity to chat with the authors of Signals and Levers: Elisabeth Hendrickson and Joel Tosi! Why is it that we get so caught up in the three illusions of predictability, progress, and control? What levers can the average developer reach? Why do we like causal diagrams so much? How does framing change as a hypothesis affect our mindset? It turns out that software engineers might have more capability for influence than we sometimes think.",
       "themes": [
-        "Sociotechnical systems",
+        "Systems thinking",
         "Company culture and incentives",
         "Delivery metrics and productivity",
         "Estimation and commitments",
